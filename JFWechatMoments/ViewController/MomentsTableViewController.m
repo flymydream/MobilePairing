@@ -92,9 +92,7 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
 }
 
 #pragma mark - Request
-
 - (void)requestUserInfo {
-//    __weak typeof(self) weakSelf = self;
     [NetRequest RequestGetWithUrl:UserInfoUrl success:^(id response) {
         User *user = [User mj_objectWithKeyValues:response];
         [self.bgImageView jf_setImageWithURL:user.profileImage placeholderImage:[UIImage imageNamed:@"ic_bg_header"]];
@@ -176,13 +174,16 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     MomentsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     [cell prepareForReuse];
     [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
-    [cell configCell:indexPath tweets:self.tweetsArray];
-
-    if (cell.clickedMoreButtonBlock == nil) {
-        [cell setClickedMoreButtonBlock:^(NSIndexPath *indexPath) {
+    if(indexPath.row < [self.tweetsArray count]){
+        Tweet *tweetModel = self.tweetsArray[indexPath.row];
+        cell.tweetModel = tweetModel;
+        [cell setClickedMoreButtonBlock:^{
+            tweetModel.isOpening = !tweetModel.isOpening;
             [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }];
     }
+    
+   
     return cell;
 }
 

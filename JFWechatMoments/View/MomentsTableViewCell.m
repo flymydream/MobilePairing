@@ -21,9 +21,6 @@
 @property(nonatomic, strong) UIButton *moreButton;
 @property(nonatomic, strong) UIButton *operateButton;
 @property(nonatomic, strong) MomentsCommentView *commentView;
-//数据
-@property(nonatomic, strong) NSIndexPath *indexPath;
-@property(nonatomic, strong) Tweet *tweetModel;
 
 @end
 
@@ -79,10 +76,8 @@
     _commentView.sd_layout.leftEqualToView(_contentLabel).rightEqualToView(_contentLabel).topSpaceToView(_timeLabel, 10);
 }
 
-- (void)configCell:(NSIndexPath *)indexPath tweets:(NSArray *)tweets {
-    _indexPath = indexPath;
-    _tweetModel = tweets[indexPath.row];
-
+- (void)setTweetModel:(Tweet *)tweetModel {
+    _tweetModel = tweetModel;
     _commentView.comments = _tweetModel.comments;
     _nickLabel.text = _tweetModel.sender.nick;
     _contentLabel.text = _tweetModel.content;
@@ -112,12 +107,12 @@
     UIView *bottomView = _tweetModel.comments.count > 0 ? _commentView : _timeLabel;
 
     [self setupAutoHeightWithBottomView:bottomView bottomMargin:15];
+    
 }
 
 - (void)clickedMoreButton {
-    _tweetModel.isOpening = !_tweetModel.isOpening;
     if (self.clickedMoreButtonBlock) {
-        self.clickedMoreButtonBlock(_indexPath);
+        self.clickedMoreButtonBlock();
     }
 }
 
