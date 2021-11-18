@@ -25,6 +25,6 @@ typedef void(^DownloadCompletedBlock)(UIImage *image, NSError *error, BOOL succe
  @param urlString 图片地址
  @param completedBlock 获取完成回调
  */
-- (void)getImageWithURL:(NSString *)urlString DownloadCompletedBlock:(DownloadCompletedBlock)completedBlock;
+- (void)getImageWithURL:(NSString *)urlString downloadCompletedBlock:(DownloadCompletedBlock)completedBlock;
 
 @end

@@ -1,0 +1,24 @@
+//
+//  JFWechatPrefixHeader.pch
+//  JFWechatMoments
+//
+//  Created by hero on 2021/11/19.
+//  Copyright © 2021 fanzhiying. All rights reserved.
+//
+
+#ifndef JFWechatPrefixHeader_h
+#define JFWechatPrefixHeader_h
+
+#import "UITableView+SDAutoTableViewCellHeight.h"
+#import "MJRefresh.h"
+#import "UIImageView+Web.h"
+#import "UIImage+Color.h"
+#import "UIScrollView+EmptyDataSet.h"
+#import "MJExtension.h"
+#import "Config.h"
+#import "NetRequest.h"
+
+#import "MacroDefinition.h"
+
+
+#endif /* JFWechatPrefixHeader_h */

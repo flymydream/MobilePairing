@@ -10,7 +10,7 @@
 
 - (void)jf_setImageWithURL:(NSString *)urlString placeholderImage:(UIImage *)placeholderImage {
     self.image = placeholderImage;
-    [[WebImageManage shareWebImageManage] getImageWithURL:urlString DownloadCompletedBlock:^(UIImage *image, NSError *error, BOOL success) {
+    [[WebImageManage shareWebImageManage] getImageWithURL:urlString downloadCompletedBlock:^(UIImage *image, NSError *error, BOOL success) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (success) {
                 self.image = image;

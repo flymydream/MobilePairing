@@ -82,6 +82,8 @@
 		6564707A1992CFE800E77320 /* Pods-JFWechatMomentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFWechatMomentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JFWechatMomentsTests/Pods-JFWechatMomentsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A65DFE617555CFE906F6CF22 /* libPods-JFWechatMomentsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JFWechatMomentsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB3FBCBC474EF0CD9CD3643 /* Pods-JFWechatMomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFWechatMomentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JFWechatMomentsTests/Pods-JFWechatMomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4BF3F2B2746B4260076B98F /* JFWechatPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFWechatPrefixHeader.pch; sourceTree = "<group>"; };
+		C4BF3F2D2746B61F0076B98F /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		563182B2205033180012DA49 /* JFWechatMoments */ = {
 			isa = PBXGroup;
 			children = (
+				C4BF3F2C2746B5800076B98F /* Header */,
 				563182E120503D880012DA49 /* Config */,
 				563182D7205038090012DA49 /* Request */,
 				563182DA205038170012DA49 /* Model */,
@@ -246,6 +249,15 @@
 				6564707A1992CFE800E77320 /* Pods-JFWechatMomentsTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C4BF3F2C2746B5800076B98F /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				C4BF3F2B2746B4260076B98F /* JFWechatPrefixHeader.pch */,
+				C4BF3F2D2746B61F0076B98F /* MacroDefinition.h */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,6 +588,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6VC6FP9QJ;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JFWechatMoments/Header/JFWechatPrefixHeader.pch";
 				INFOPLIST_FILE = JFWechatMoments/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -592,6 +606,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6VC6FP9QJ;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JFWechatMoments/Header/JFWechatPrefixHeader.pch";
 				INFOPLIST_FILE = JFWechatMoments/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

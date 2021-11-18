@@ -13,12 +13,18 @@ static WebImageManage *webImageManage;
 /**
  保存获取失败的图片地址，避免重复获取
  */
-@property(nonatomic, strong) NSMutableArray *failUrls;
+@property(nonatomic, strong) NSMutableArray *failUrlsArray;
 
 @end
 
 @implementation WebImageManage
 
+- (NSMutableArray *)failUrlsArray {
+    if (!_failUrlsArray) {
+        _failUrlsArray = [[NSMutableArray alloc] init];
+    }
+    return _failUrlsArray;
+}
 + (WebImageManage *)shareWebImageManage {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -27,17 +33,17 @@ static WebImageManage *webImageManage;
     return webImageManage;
 }
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        _failUrls = [[NSMutableArray alloc] init];
-    }
-    return self;
-}
+//- (instancetype)init {
+//    self = [super init];
+//    if (self) {
+//        _failUrls = [[NSMutableArray alloc] init];
+//    }
+//    return self;
+//}
 
-- (void)getImageWithURL:(NSString *)urlString DownloadCompletedBlock:(DownloadCompletedBlock)completedBlock {
+- (void)getImageWithURL:(NSString *)urlString downloadCompletedBlock:(DownloadCompletedBlock)completedBlock {
 
-    if ([_failUrls containsObject:urlString]) {
+    if ([self.failUrlsArray containsObject:urlString]) {
         completedBlock(nil, nil, NO);
         return;
     }
@@ -49,8 +55,8 @@ static WebImageManage *webImageManage;
         completedBlock(responseObject, nil, YES);
     } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
         //获取图片失败之后记入数组
-        if (urlString != nil && ![_failUrls containsObject:urlString]) {
-            [_failUrls addObject:urlString];
+        if (urlString != nil && ![self.failUrlsArray containsObject:urlString]) {
+            [self.failUrlsArray addObject:urlString];
         }
         completedBlock(nil, error, NO);
     }];

@@ -7,14 +7,14 @@
 #import "Tweet.h"
 #import "User.h"
 #import "MomentsTableViewCell.h"
-#import "UITableView+SDAutoTableViewCellHeight.h"
-#import "MJRefresh.h"
-#import "UIImageView+Web.h"
-#import "UIImage+Color.h"
-#import "UIScrollView+EmptyDataSet.h"
-#import "MJExtension.h"
-#import "Config.h"
-#import "NetRequest.h"
+//#import "UITableView+SDAutoTableViewCellHeight.h"
+//#import "MJRefresh.h"
+//#import "UIImageView+Web.h"
+//#import "UIImage+Color.h"
+//#import "UIScrollView+EmptyDataSet.h"
+//#import "MJExtension.h"
+//#import "Config.h"
+//#import "NetRequest.h"
 
 static NSString *reuseIdentifier = @"reuseIdentifier";
 
@@ -26,18 +26,37 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
 /**
  tableview当前显示的数据
  */
-@property (nonatomic, strong) NSMutableArray *tweets;
+@property (nonatomic, strong) NSMutableArray *tweetsArray;
 
 /**
  请求到的所有有效数据
  */
-@property (nonatomic, strong) NSMutableArray *allTweets;
+@property (nonatomic, strong) NSMutableArray *allTweetsArray;
 
-@property (nonatomic, strong) SuccessBlock tweetsSuccessBlock;
+@property (nonatomic, copy) SuccessBlock tweetsSuccessBlock;
+
 
 @end
 
 @implementation MomentsTableViewController
+/**
+ tableview当前显示的数据懒加载
+ */
+- (NSMutableArray *)tweetsArray{
+    if (!_tweetsArray) {
+        _tweetsArray = [[NSMutableArray alloc] init];
+    }
+    return _tweetsArray;
+}
+/**
+ 有效数据懒加载
+ */
+- (NSMutableArray *)allTweetsArray{
+    if (!_allTweetsArray) {
+        _allTweetsArray = [[NSMutableArray alloc] init];
+    }
+    return _allTweetsArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,8 +65,8 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
 }
 
 - (void)requestData {
-    _allTweets = [[NSMutableArray alloc] init];
-    _tweets = [[NSMutableArray alloc] init];
+//    _allTweets = [[NSMutableArray alloc] init];
+//    _tweetsArray = [[NSMutableArray alloc] init];
     [self requestUserInfo];
     [self requestTweets];
 }
@@ -75,21 +94,21 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
 #pragma mark - Request
 
 - (void)requestUserInfo {
-    __weak typeof(self) weakSelf = self;
+//    __weak typeof(self) weakSelf = self;
     [NetRequest RequestGetWithUrl:UserInfoUrl success:^(id response) {
         User *user = [User mj_objectWithKeyValues:response];
-        [weakSelf.bgImageView jf_setImageWithURL:user.profileImage placeholderImage:[UIImage imageNamed:@"ic_bg_header"]];
-        [weakSelf.avatarImageView jf_setImageWithURL:user.avatar placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
-        weakSelf.avatarImageView.layer.borderColor = [UIColor colorWithRed:231 / 255.0 green:231 / 255.0 blue:231 / 255.0 alpha:1.0].CGColor;
-        weakSelf.avatarImageView.layer.borderWidth = 1;
-        weakSelf.nickLabel.text = user.nick;
+        [self.bgImageView jf_setImageWithURL:user.profileImage placeholderImage:[UIImage imageNamed:@"ic_bg_header"]];
+        [self.avatarImageView jf_setImageWithURL:user.avatar placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
+        self.avatarImageView.layer.borderColor = [UIColor colorWithRed:231 / 255.0 green:231 / 255.0 blue:231 / 255.0 alpha:1.0].CGColor;
+        self.avatarImageView.layer.borderWidth = 1;
+        self.nickLabel.text = user.nick;
     } failure:^(NSError *error) {
         NSLog(@"请求失败%@", error);
     }];
 }
 
 - (void)requestTweets {
-    __weak typeof(self) weakSelf = self;
+    
     [NetRequest RequestGetWithUrl:UserTweetsUrl success:^(id response) {
         NSArray *allTweet = [Tweet mj_objectArrayWithKeyValuesArray:response];
         [self checkResponse:allTweet];
@@ -98,44 +117,38 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
         NSLog(@"请求失败%@", error);
     }];
 
+    kWeakSelf(self);
     _tweetsSuccessBlock = ^(id response) {
-      weakSelf.tableView.mj_footer.hidden = NO;
-      if (weakSelf.tableView.mj_header.isRefreshing) {
-          [weakSelf.tableView.mj_header endRefreshing];
-          [weakSelf.tableView.mj_footer resetNoMoreData];
-      } else if (weakSelf.tableView.mj_footer.isRefreshing) {
-          if (_tweets.count < _allTweets.count) {
-              [weakSelf.tableView.mj_footer endRefreshing];
-          } else {
-              [weakSelf.tableView.mj_footer endRefreshingWithNoMoreData];
-          }
+      kStrongSelf(self);
+      self.tableView.mj_footer.hidden = NO;
+      if (self.tweetsArray.count < self.allTweetsArray.count) {
+         [self.tableView.mj_header endRefreshing];
+         [self.tableView.mj_footer endRefreshing];
+      } else {
+         [self.tableView.mj_footer endRefreshingWithNoMoreData];
       }
-      [weakSelf.tableView reloadData];
+      [self.tableView reloadData];
   };
 }
 
 - (void)refresh {
-    [_tweets removeAllObjects];
-    if (_allTweets.count <= 5) {
-        [_tweets addObjectsFromArray:_allTweets];
+    [self.tweetsArray removeAllObjects];
+    if (self.allTweetsArray.count <= 5) {
+        [self.tweetsArray addObjectsFromArray:self.allTweetsArray];
     } else {
-        [_tweets addObjectsFromArray:[_allTweets subarrayWithRange:NSMakeRange(0, 5)]];
+        [self.tweetsArray addObjectsFromArray:[self.allTweetsArray subarrayWithRange:NSMakeRange(0, 5)]];
     }
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        _tweetsSuccessBlock(_tweets);
-    });
+    _tweetsSuccessBlock(self.tweetsArray);
 }
 
 - (void)loadMore {
-    NSInteger diffCount = _allTweets.count - _tweets.count;
+    NSInteger diffCount = self.allTweetsArray.count - self.tweetsArray.count;
     if (diffCount <= 5) {
-        [_tweets addObjectsFromArray:[_allTweets subarrayWithRange:NSMakeRange(_tweets.count, diffCount)]];
+        [self.tweetsArray addObjectsFromArray:[self.allTweetsArray subarrayWithRange:NSMakeRange(self.tweetsArray.count, diffCount)]];
     } else {
-        [_tweets addObjectsFromArray:[_allTweets subarrayWithRange:NSMakeRange(_tweets.count, 5)]];
+        [self.tweetsArray addObjectsFromArray:[self.allTweetsArray subarrayWithRange:NSMakeRange(self.tweetsArray.count, 5)]];
     }
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        _tweetsSuccessBlock(_tweets);
-    });
+    _tweetsSuccessBlock(self.tweetsArray);
 }
 
 - (NSInteger)checkResponse:(NSArray *)allTweet {
@@ -147,15 +160,15 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
         } else {
             tweet.shouldShowMoreButton = NO;
         }
-        [_allTweets addObject:tweet];
+        [self.allTweetsArray addObject:tweet];
     }
-    return _allTweets.count;
+    return self.allTweetsArray.count;
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _tweets.count;
+    return self.tweetsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -163,7 +176,7 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     MomentsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     [cell prepareForReuse];
     [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
-    [cell configCell:indexPath tweets:_tweets];
+    [cell configCell:indexPath tweets:self.tweetsArray];
 
     if (cell.clickedMoreButtonBlock == nil) {
         [cell setClickedMoreButtonBlock:^(NSIndexPath *indexPath) {

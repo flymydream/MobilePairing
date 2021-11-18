@@ -9,9 +9,9 @@
 @interface Tweet : NSObject
 
 @property(nonatomic, copy) NSString *content;
-@property(nonatomic, strong) NSArray *images;
+@property(nonatomic, copy) NSArray *images;
 @property(nonatomic, strong) User *sender;
-@property(nonatomic, strong) NSArray *comments;
+@property(nonatomic, copy) NSArray *comments;
 /**
  content的展开状态
  YES为全文状态，NO为收起状态

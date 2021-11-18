@@ -7,10 +7,10 @@
 
 @interface Config : NSObject
 
-extern NSString *const HostUrl;
+UIKIT_EXTERN NSString *const HostUrl;
 // 获取用户信息
-extern NSString *const UserInfoUrl;
+UIKIT_EXTERN NSString *const UserInfoUrl;
 // 获取用户朋友圈
-extern NSString *const UserTweetsUrl;
+UIKIT_EXTERN NSString *const UserTweetsUrl;
 
 @end

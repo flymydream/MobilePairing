@@ -10,6 +10,6 @@
 /**
  传入Tweet中的images图片数组
  */
-@property(nonatomic, strong) NSArray *imageArray;
+@property(nonatomic, copy) NSArray *imageArray;
 
 @end

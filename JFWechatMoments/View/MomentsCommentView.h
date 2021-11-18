@@ -10,6 +10,6 @@
 /**
  传入Tweet中的comments评论数组
  */
-@property(nonatomic, strong) NSArray *comments;
+@property(nonatomic, copy) NSArray *comments;
 
 @end
