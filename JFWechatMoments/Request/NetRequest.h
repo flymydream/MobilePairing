@@ -18,6 +18,6 @@ typedef void(^FailureBlock)(NSError *error);
  @param successBlock 请求成功回调
  @param failureBlock 请求失败回调
  */
-+ (void)RequestGetWithUrl:(NSString *)urlString success:(SuccessBlock)successBlock failure:(FailureBlock)failureBlock;
++ (void)requestGetWithUrl:(NSString *)urlString success:(SuccessBlock)successBlock failure:(FailureBlock)failureBlock;
 
 @end
