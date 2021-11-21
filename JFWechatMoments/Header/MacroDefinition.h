@@ -16,5 +16,12 @@
 #define kWeakSelf(type)__weak typeof(type)weak##type = type
 #define kStrongSelf(type)__strong typeof(type)type = weak##type
 
+#define kUserDefaults [NSUserDefaults standardUserDefaults]
+// 本地存储对象
+#define JFSetValueforKey(value, key) [[NSUserDefaults standardUserDefaults] setValue:value forKey:key]
+// 获取本地存储对象
+#define JFValueWithKey(key) [[NSUserDefaults standardUserDefaults] valueForKey:key]
+//移除本地存储
+#define JFRemoveWithKey(key) [[NSUserDefaults standardUserDefaults] removeObjectForKey:key]
 
 #endif /* MacroDefinition_h */
