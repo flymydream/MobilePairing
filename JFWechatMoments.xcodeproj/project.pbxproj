@@ -26,6 +26,9 @@
 		564B91F72054F11E00AC85C9 /* UIImageView+Web.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B91F52054F11E00AC85C9 /* UIImageView+Web.m */; };
 		564B91FD20556E7B00AC85C9 /* MomentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B91FC20556E7B00AC85C9 /* MomentsTableViewController.m */; };
 		79DD82A040C12ED4F8226F19 /* libPods-JFWechatMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD74207EF28B2D35FFA0976 /* libPods-JFWechatMoments.a */; };
+		C4D4BF2D2749D0860035737F /* install-templates.sh in Resources */ = {isa = PBXBuildFile; fileRef = C4D4BF282749D0860035737F /* install-templates.sh */; };
+		C4D4BF2E2749D0860035737F /* uninstall-templates.sh in Resources */ = {isa = PBXBuildFile; fileRef = C4D4BF292749D0860035737F /* uninstall-templates.sh */; };
+		C4D4BF322749D1210035737F /* NetRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D4BF312749D1210035737F /* NetRequestSpec.m */; };
 		C50AFA72181324C2D70B133D /* libPods-JFWechatMomentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A65DFE617555CFE906F6CF22 /* libPods-JFWechatMomentsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +87,9 @@
 		BEB3FBCBC474EF0CD9CD3643 /* Pods-JFWechatMomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFWechatMomentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JFWechatMomentsTests/Pods-JFWechatMomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4BF3F2B2746B4260076B98F /* JFWechatPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFWechatPrefixHeader.pch; sourceTree = "<group>"; };
 		C4BF3F2D2746B61F0076B98F /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
+		C4D4BF282749D0860035737F /* install-templates.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "install-templates.sh"; sourceTree = "<group>"; };
+		C4D4BF292749D0860035737F /* uninstall-templates.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "uninstall-templates.sh"; sourceTree = "<group>"; };
+		C4D4BF312749D1210035737F /* NetRequestSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetRequestSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,7 @@
 			children = (
 				563182B2205033180012DA49 /* JFWechatMoments */,
 				563182CB205033190012DA49 /* JFWechatMomentsTests */,
+				C4D4BF272749D0860035737F /* Xcode Templates */,
 				563182B1205033180012DA49 /* Products */,
 				634A797D5D2660C79A460D52 /* Pods */,
 				2A37C5CC411C427FA9F9B525 /* Frameworks */,
@@ -182,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				563182CE205033190012DA49 /* Info.plist */,
+				C4D4BF312749D1210035737F /* NetRequestSpec.m */,
 			);
 			path = JFWechatMomentsTests;
 			sourceTree = "<group>";
@@ -258,6 +266,15 @@
 				C4BF3F2D2746B61F0076B98F /* MacroDefinition.h */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		C4D4BF272749D0860035737F /* Xcode Templates */ = {
+			isa = PBXGroup;
+			children = (
+				C4D4BF282749D0860035737F /* install-templates.sh */,
+				C4D4BF292749D0860035737F /* uninstall-templates.sh */,
+			);
+			path = "Xcode Templates";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +372,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D4BF2D2749D0860035737F /* install-templates.sh in Resources */,
+				C4D4BF2E2749D0860035737F /* uninstall-templates.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D4BF322749D1210035737F /* NetRequestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
