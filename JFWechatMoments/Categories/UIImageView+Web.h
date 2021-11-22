@@ -17,13 +17,13 @@
 
 
 /**
- *  根据url设置网络图片
- *
- *  @param urlString              网络图片的url
- *  @param placeholderImage 下载未完成时的占位图
+ 设置网络图片（优化缓存之后）
+
+ @param urlString 图片地址
+ @param placeholderImage 默认图片
  */
-- (void)jf_setImageWithImageURL:(NSString *)urlString
-          placeholderImage:(UIImage *)placeholderImage;
+- (void)jf_setImageWithUrl:(NSString *)urlString placeholderImage:(UIImage *)placeholderImage;
+
 
 
 

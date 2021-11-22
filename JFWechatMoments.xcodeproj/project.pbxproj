@@ -10,7 +10,6 @@
 		011FF4E02050CB20002C1EE6 /* MomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FF4DF2050CB20002C1EE6 /* MomentsTableViewCell.m */; };
 		011FF4E32050D14C002C1EE6 /* MomentsPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FF4E22050D14C002C1EE6 /* MomentsPhotoView.m */; };
 		011FF4E62050D3B9002C1EE6 /* MomentsCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FF4E52050D3B8002C1EE6 /* MomentsCommentView.m */; };
-		5612E37A2052C026002ECEB4 /* WebImageManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5612E3792052C026002ECEB4 /* WebImageManage.m */; };
 		563182B5205033180012DA49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 563182B4205033180012DA49 /* AppDelegate.m */; };
 		563182BB205033180012DA49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563182B9205033180012DA49 /* Main.storyboard */; };
 		563182BD205033180012DA49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563182BC205033180012DA49 /* Assets.xcassets */; };
@@ -26,12 +25,11 @@
 		564B91F72054F11E00AC85C9 /* UIImageView+Web.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B91F52054F11E00AC85C9 /* UIImageView+Web.m */; };
 		564B91FD20556E7B00AC85C9 /* MomentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B91FC20556E7B00AC85C9 /* MomentsTableViewController.m */; };
 		79DD82A040C12ED4F8226F19 /* libPods-JFWechatMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD74207EF28B2D35FFA0976 /* libPods-JFWechatMoments.a */; };
-		C47C1A47274A161000E093BE /* JFFileMannager.m in Sources */ = {isa = PBXBuildFile; fileRef = C47C1A46274A161000E093BE /* JFFileMannager.m */; };
-		C47C1A4A274A1BF200E093BE /* JFDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C47C1A49274A1BF200E093BE /* JFDataManager.m */; };
+		C48CDF1D274BB14700A4D74D /* JFDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C48CDF1C274BB14700A4D74D /* JFDownloadManager.m */; };
+		C48CDF23274BBA4700A4D74D /* WebImageManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C48CDF22274BBA4700A4D74D /* WebImageManage.m */; };
 		C4D4BF2D2749D0860035737F /* install-templates.sh in Resources */ = {isa = PBXBuildFile; fileRef = C4D4BF282749D0860035737F /* install-templates.sh */; };
 		C4D4BF2E2749D0860035737F /* uninstall-templates.sh in Resources */ = {isa = PBXBuildFile; fileRef = C4D4BF292749D0860035737F /* uninstall-templates.sh */; };
 		C4D4BF322749D1210035737F /* NetRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D4BF312749D1210035737F /* NetRequestSpec.m */; };
-		C4E80DCB274A0D520033D41C /* JFDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E80DCA274A0D520033D41C /* JFDownloadManager.m */; };
 		C50AFA72181324C2D70B133D /* libPods-JFWechatMomentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A65DFE617555CFE906F6CF22 /* libPods-JFWechatMomentsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +52,6 @@
 		011FF4E52050D3B8002C1EE6 /* MomentsCommentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MomentsCommentView.m; sourceTree = "<group>"; };
 		3C0F073E2F0899827BA2B15F /* Pods-JFWechatMoments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFWechatMoments.release.xcconfig"; path = "Pods/Target Support Files/Pods-JFWechatMoments/Pods-JFWechatMoments.release.xcconfig"; sourceTree = "<group>"; };
 		432EEECF7ECBCDD670E3FF45 /* Pods-JFWechatMoments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFWechatMoments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JFWechatMoments/Pods-JFWechatMoments.debug.xcconfig"; sourceTree = "<group>"; };
-		5612E3782052C026002ECEB4 /* WebImageManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebImageManage.h; sourceTree = "<group>"; };
-		5612E3792052C026002ECEB4 /* WebImageManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebImageManage.m; sourceTree = "<group>"; };
 		563182B0205033180012DA49 /* JFWechatMoments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFWechatMoments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		563182B3205033180012DA49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		563182B4205033180012DA49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,17 +84,15 @@
 		6564707A1992CFE800E77320 /* Pods-JFWechatMomentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFWechatMomentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JFWechatMomentsTests/Pods-JFWechatMomentsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A65DFE617555CFE906F6CF22 /* libPods-JFWechatMomentsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JFWechatMomentsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB3FBCBC474EF0CD9CD3643 /* Pods-JFWechatMomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFWechatMomentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JFWechatMomentsTests/Pods-JFWechatMomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C47C1A45274A161000E093BE /* JFFileMannager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFFileMannager.h; sourceTree = "<group>"; };
-		C47C1A46274A161000E093BE /* JFFileMannager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFFileMannager.m; sourceTree = "<group>"; };
-		C47C1A48274A1BF200E093BE /* JFDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFDataManager.h; sourceTree = "<group>"; };
-		C47C1A49274A1BF200E093BE /* JFDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFDataManager.m; sourceTree = "<group>"; };
+		C48CDF1B274BB14700A4D74D /* JFDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFDownloadManager.h; sourceTree = "<group>"; };
+		C48CDF1C274BB14700A4D74D /* JFDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFDownloadManager.m; sourceTree = "<group>"; };
+		C48CDF21274BBA4700A4D74D /* WebImageManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebImageManage.h; path = JFWechatMoments/Request/WebImage/WebImageManage.h; sourceTree = SOURCE_ROOT; };
+		C48CDF22274BBA4700A4D74D /* WebImageManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebImageManage.m; path = JFWechatMoments/Request/WebImage/WebImageManage.m; sourceTree = SOURCE_ROOT; };
 		C4BF3F2B2746B4260076B98F /* JFWechatPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFWechatPrefixHeader.pch; sourceTree = "<group>"; };
 		C4BF3F2D2746B61F0076B98F /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 		C4D4BF282749D0860035737F /* install-templates.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "install-templates.sh"; sourceTree = "<group>"; };
 		C4D4BF292749D0860035737F /* uninstall-templates.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "uninstall-templates.sh"; sourceTree = "<group>"; };
 		C4D4BF312749D1210035737F /* NetRequestSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetRequestSpec.m; sourceTree = "<group>"; };
-		C4E80DC9274A0D520033D41C /* JFDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFDownloadManager.h; sourceTree = "<group>"; };
-		C4E80DCA274A0D520033D41C /* JFDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFDownloadManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,14 +140,6 @@
 		5612E3722052B984002ECEB4 /* WebImage */ = {
 			isa = PBXGroup;
 			children = (
-				5612E3782052C026002ECEB4 /* WebImageManage.h */,
-				5612E3792052C026002ECEB4 /* WebImageManage.m */,
-				C4E80DC9274A0D520033D41C /* JFDownloadManager.h */,
-				C4E80DCA274A0D520033D41C /* JFDownloadManager.m */,
-				C47C1A45274A161000E093BE /* JFFileMannager.h */,
-				C47C1A46274A161000E093BE /* JFFileMannager.m */,
-				C47C1A48274A1BF200E093BE /* JFDataManager.h */,
-				C47C1A49274A1BF200E093BE /* JFDataManager.m */,
 			);
 			path = WebImage;
 			sourceTree = "<group>";
@@ -212,6 +198,7 @@
 		563182D7205038090012DA49 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				C48CDF1A274BB10A00A4D74D /* CacheWebImage */,
 				5612E3722052B984002ECEB4 /* WebImage */,
 				563182DE2050396B0012DA49 /* NetRequest.h */,
 				563182DF2050396B0012DA49 /* NetRequest.m */,
@@ -272,6 +259,17 @@
 				6564707A1992CFE800E77320 /* Pods-JFWechatMomentsTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C48CDF1A274BB10A00A4D74D /* CacheWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				C48CDF21274BBA4700A4D74D /* WebImageManage.h */,
+				C48CDF22274BBA4700A4D74D /* WebImageManage.m */,
+				C48CDF1B274BB14700A4D74D /* JFDownloadManager.h */,
+				C48CDF1C274BB14700A4D74D /* JFDownloadManager.m */,
+			);
+			path = CacheWebImage;
 			sourceTree = "<group>";
 		};
 		C4BF3F2C2746B5800076B98F /* Header */ = {
@@ -457,12 +455,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				564B91F42054F04100AC85C9 /* NSString+MD5.m in Sources */,
+				C48CDF1D274BB14700A4D74D /* JFDownloadManager.m in Sources */,
 				011FF4E62050D3B9002C1EE6 /* MomentsCommentView.m in Sources */,
 				563182E420503DBC0012DA49 /* Config.m in Sources */,
-				C47C1A4A274A1BF200E093BE /* JFDataManager.m in Sources */,
-				C47C1A47274A161000E093BE /* JFFileMannager.m in Sources */,
-				5612E37A2052C026002ECEB4 /* WebImageManage.m in Sources */,
 				563182F0205051040012DA49 /* User.m in Sources */,
+				C48CDF23274BBA4700A4D74D /* WebImageManage.m in Sources */,
 				563182F32050535B0012DA49 /* Comment.m in Sources */,
 				564B91F72054F11E00AC85C9 /* UIImageView+Web.m in Sources */,
 				563182F6205053D60012DA49 /* Tweet.m in Sources */,
@@ -471,7 +468,6 @@
 				563182B5205033180012DA49 /* AppDelegate.m in Sources */,
 				563182E02050396B0012DA49 /* NetRequest.m in Sources */,
 				011FF4E32050D14C002C1EE6 /* MomentsPhotoView.m in Sources */,
-				C4E80DCB274A0D520033D41C /* JFDownloadManager.m in Sources */,
 				011FF4E02050CB20002C1EE6 /* MomentsTableViewCell.m in Sources */,
 				564B91FD20556E7B00AC85C9 /* MomentsTableViewController.m in Sources */,
 			);

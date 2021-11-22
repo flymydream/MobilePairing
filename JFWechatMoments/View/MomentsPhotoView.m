@@ -61,7 +61,8 @@
         imageView.hidden = NO;
         imageView.frame = CGRectMake(columnIndex * (itemW + 5), rowIndex * (itemH + 5), itemW, itemH);
         NSDictionary *urlDic = imageArray[i];
-        [imageView jf_setImageWithURL:urlDic[@"url"] placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
+//        [imageView jf_setImageWithURL:urlDic[@"url"] placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
+        [imageView jf_setImageWithUrl:urlDic[@"url"] placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
     }
     CGFloat width = perRowItemCount * itemW + (perRowItemCount - 1) * 5;
     int rowCount = ceilf(imageArray.count * 1.0 / perRowItemCount);

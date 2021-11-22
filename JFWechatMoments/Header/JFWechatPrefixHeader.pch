@@ -18,8 +18,6 @@
 #import "Config.h"
 #import "NetRequest.h"
 #import "MacroDefinition.h"
-#import "JFDataManager.h"
-#import "JFFileMannager.h"
 
 
 #endif /* JFWechatPrefixHeader_h */

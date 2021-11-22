@@ -27,13 +27,16 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
  tableview当前显示的数据
  */
 @property (nonatomic, strong) NSMutableArray *tweetsArray;
-
 /**
  请求到的所有有效数据
  */
 @property (nonatomic, strong) NSMutableArray *allTweetsArray;
 
 @property (nonatomic, copy) SuccessBlock tweetsSuccessBlock;
+/**
+ 头部视图
+ */
+@property (weak, nonatomic) IBOutlet UIView *headerView;
 
 
 @end
@@ -63,7 +66,13 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     [self setupTableView];
     [self requestData];
 }
-
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if (IsBangsScreen) {
+        self.tableView.frame = CGRectMake(0, -kStatuBarHeight, kScreenWidth, kStatuBarHeight + kScreenHeight);
+        self.headerView.frame = CGRectMake(0, -kStatuBarHeight, kScreenWidth, kStatuBarHeight + 260);
+    }
+}
 - (void)requestData {
 //    _allTweets = [[NSMutableArray alloc] init];
 //    _tweetsArray = [[NSMutableArray alloc] init];
@@ -89,14 +98,22 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
         [self loadMore];
     }];
     self.tableView.mj_footer.hidden = YES;
+    
+    NOTIFY_ADD(refreshNotification:, Nofication_RefreshTableView);
 }
-
+#pragma mark-刷新列表
+- (void)refreshNotification:(NSNotification *)notifi {
+    [self.tableView reloadData];
+}
 #pragma mark - Request
 - (void)requestUserInfo {
     [NetRequest requestGetWithUrl:UserInfoUrl success:^(id response) {
         User *user = [User mj_objectWithKeyValues:response];
-        [self.bgImageView jf_setImageWithURL:user.profileImage placeholderImage:[UIImage imageNamed:@"ic_bg_header"]];
-        [self.avatarImageView jf_setImageWithURL:user.avatar placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
+//        [self.bgImageView jf_setImageWithURL:user.profileImage placeholderImage:[UIImage imageNamed:@"ic_bg_header"]];
+//        [self.avatarImageView jf_setImageWithURL:user.avatar placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
+        
+        [self.bgImageView jf_setImageWithUrl:user.profileImage placeholderImage:[UIImage imageNamed:@"ic_bg_header"]];
+        [self.avatarImageView jf_setImageWithUrl:user.avatar placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
         self.avatarImageView.layer.borderColor = [UIColor colorWithRed:231 / 255.0 green:231 / 255.0 blue:231 / 255.0 alpha:1.0].CGColor;
         self.avatarImageView.layer.borderWidth = 1;
         self.nickLabel.text = user.nick;
@@ -212,6 +229,9 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
 - (void)emptyDataSet:(UIScrollView *)scrollView didTapButton:(UIButton *)button {
     [self requestUserInfo];
     [self requestTweets];
+}
+- (void)dealloc {
+    NOTIFY_REMOVE(Nofication_RefreshTableView);
 }
 
 @end

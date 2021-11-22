@@ -13,7 +13,7 @@ UIKIT_EXTERN NSString *const UserInfoUrl;
 // 获取用户朋友圈
 UIKIT_EXTERN NSString *const UserTweetsUrl;
 
-//本地字典
-UIKIT_EXTERN NSString *const LocalImageDict;
+//通知-用于刷新tableview列表
+UIKIT_EXTERN NSString *const Nofication_RefreshTableView;
 
 @end

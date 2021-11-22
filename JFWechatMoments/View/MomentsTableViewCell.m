@@ -83,8 +83,9 @@
     _contentLabel.text = _tweetModel.content;
     _timeLabel.text = @"3分钟前";
     _photoView.imageArray = _tweetModel.images;
-    [_avatarImageView jf_setImageWithURL:_tweetModel.sender.avatar placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
+//    [_avatarImageView jf_setImageWithURL:_tweetModel.sender.avatar placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
 
+    [_avatarImageView jf_setImageWithUrl:_tweetModel.sender.avatar placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
     if (_tweetModel.shouldShowMoreButton) {
         _moreButton.sd_layout.heightIs(20);
         _moreButton.hidden = NO;
