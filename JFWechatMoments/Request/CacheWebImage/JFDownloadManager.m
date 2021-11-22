@@ -26,13 +26,16 @@
 
 
 @implementation JFDownloadManager
+
 #pragma mark-懒加载
+
 - (NSMutableDictionary*)operationsMutableDict {
     if (!_operationsMutableDict) {
         _operationsMutableDict = [NSMutableDictionary dictionary];
     }
     return _operationsMutableDict;
 }
+
 - (NSOperationQueue*)queue{
     if (!_queue) {
         _queue = [[NSOperationQueue alloc] init];
@@ -40,6 +43,7 @@
     }
     return _queue;
 }
+
 - (NSCache*)imageCache {
     if (!_imageCache) {
         _imageCache = [[NSCache alloc] init];
@@ -55,6 +59,7 @@
     });
     return downloadManager;
 }
+
 - (void)jf_getImageWithUrl:(NSString *)urlString placeholderImage:(UIImage *)placeholderImage completeCallback:(nullable void (^)(UIImage *picImage))completeCallback{
     //在内存中查到缓存
     if (urlString.length > 0) {

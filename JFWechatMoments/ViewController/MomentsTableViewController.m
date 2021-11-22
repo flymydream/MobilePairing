@@ -7,14 +7,6 @@
 #import "Tweet.h"
 #import "User.h"
 #import "MomentsTableViewCell.h"
-//#import "UITableView+SDAutoTableViewCellHeight.h"
-//#import "MJRefresh.h"
-//#import "UIImageView+Web.h"
-//#import "UIImage+Color.h"
-//#import "UIScrollView+EmptyDataSet.h"
-//#import "MJExtension.h"
-//#import "Config.h"
-//#import "NetRequest.h"
 
 static NSString *reuseIdentifier = @"reuseIdentifier";
 
@@ -31,7 +23,6 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
  请求到的所有有效数据
  */
 @property (nonatomic, strong) NSMutableArray *allTweetsArray;
-
 @property (nonatomic, copy) SuccessBlock tweetsSuccessBlock;
 /**
  头部视图
@@ -66,6 +57,7 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     [self setupTableView];
     [self requestData];
 }
+
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     if (IsBangsScreen) {
@@ -73,6 +65,7 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
         self.headerView.frame = CGRectMake(0, -kStatuBarHeight, kScreenWidth, kStatuBarHeight + 260);
     }
 }
+
 - (void)requestData {
 //    _allTweets = [[NSMutableArray alloc] init];
 //    _tweetsArray = [[NSMutableArray alloc] init];
@@ -98,14 +91,17 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
         [self loadMore];
     }];
     self.tableView.mj_footer.hidden = YES;
-    
+    //注册通知
     NOTIFY_ADD(refreshNotification:, Nofication_RefreshTableView);
 }
 #pragma mark-刷新列表
+
 - (void)refreshNotification:(NSNotification *)notifi {
     [self.tableView reloadData];
 }
+
 #pragma mark - Request
+
 - (void)requestUserInfo {
     [NetRequest requestGetWithUrl:UserInfoUrl success:^(id response) {
         User *user = [User mj_objectWithKeyValues:response];
@@ -123,7 +119,6 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
 }
 
 - (void)requestTweets {
-    
     [NetRequest requestGetWithUrl:UserTweetsUrl success:^(id response) {
         NSArray *allTweet = [Tweet mj_objectArrayWithKeyValuesArray:response];
         [self checkResponse:allTweet];
@@ -187,7 +182,6 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     MomentsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     [cell prepareForReuse];
     [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
@@ -199,8 +193,6 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
             [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }];
     }
-    
-   
     return cell;
 }
 
@@ -230,6 +222,7 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     [self requestUserInfo];
     [self requestTweets];
 }
+
 - (void)dealloc {
     NOTIFY_REMOVE(Nofication_RefreshTableView);
 }
