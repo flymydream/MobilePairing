@@ -4,8 +4,6 @@
 //
 
 #import "NetRequest.h"
-#import "AFNetworking.h"
-#import "Config.h"
 
 @implementation NetRequest
 

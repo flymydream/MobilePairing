@@ -7,6 +7,7 @@
 //
 
 #import "JFDownloadManager.h"
+
 @interface JFDownloadManager ()
 /**
  图片内存缓存

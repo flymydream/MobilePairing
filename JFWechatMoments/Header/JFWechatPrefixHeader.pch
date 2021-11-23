@@ -13,6 +13,7 @@
 #import "MJRefresh.h"
 #import "MJExtension.h"
 #import "Config.h"
+#import "AFNetworking.h"
 #import "NetRequest.h"
 #import "MacroDefinition.h"
 

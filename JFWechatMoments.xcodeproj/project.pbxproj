@@ -25,11 +25,13 @@
 		564B91F72054F11E00AC85C9 /* UIImageView+Web.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B91F52054F11E00AC85C9 /* UIImageView+Web.m */; };
 		564B91FD20556E7B00AC85C9 /* MomentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B91FC20556E7B00AC85C9 /* MomentsTableViewController.m */; };
 		79DD82A040C12ED4F8226F19 /* libPods-JFWechatMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD74207EF28B2D35FFA0976 /* libPods-JFWechatMoments.a */; };
+		C48351E3274D28C4001858FC /* JFDownloadManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C48351E2274D28C4001858FC /* JFDownloadManagerTests.m */; };
+		C48351E5274D2F25001858FC /* WebImageManageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C48351E4274D2F25001858FC /* WebImageManageTests.m */; };
 		C48CDF1D274BB14700A4D74D /* JFDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C48CDF1C274BB14700A4D74D /* JFDownloadManager.m */; };
 		C48CDF23274BBA4700A4D74D /* WebImageManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C48CDF22274BBA4700A4D74D /* WebImageManage.m */; };
+		C4B820C2274D25EF005BCC00 /* JFDownloadManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B820C1274D25EF005BCC00 /* JFDownloadManagerSpec.m */; };
 		C4D4BF2D2749D0860035737F /* install-templates.sh in Resources */ = {isa = PBXBuildFile; fileRef = C4D4BF282749D0860035737F /* install-templates.sh */; };
 		C4D4BF2E2749D0860035737F /* uninstall-templates.sh in Resources */ = {isa = PBXBuildFile; fileRef = C4D4BF292749D0860035737F /* uninstall-templates.sh */; };
-		C4D4BF322749D1210035737F /* NetRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D4BF312749D1210035737F /* NetRequestSpec.m */; };
 		C50AFA72181324C2D70B133D /* libPods-JFWechatMomentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A65DFE617555CFE906F6CF22 /* libPods-JFWechatMomentsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -84,15 +86,17 @@
 		6564707A1992CFE800E77320 /* Pods-JFWechatMomentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFWechatMomentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JFWechatMomentsTests/Pods-JFWechatMomentsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A65DFE617555CFE906F6CF22 /* libPods-JFWechatMomentsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JFWechatMomentsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB3FBCBC474EF0CD9CD3643 /* Pods-JFWechatMomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFWechatMomentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JFWechatMomentsTests/Pods-JFWechatMomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C48351E2274D28C4001858FC /* JFDownloadManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFDownloadManagerTests.m; sourceTree = "<group>"; };
+		C48351E4274D2F25001858FC /* WebImageManageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebImageManageTests.m; sourceTree = "<group>"; };
 		C48CDF1B274BB14700A4D74D /* JFDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFDownloadManager.h; sourceTree = "<group>"; };
 		C48CDF1C274BB14700A4D74D /* JFDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFDownloadManager.m; sourceTree = "<group>"; };
 		C48CDF21274BBA4700A4D74D /* WebImageManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebImageManage.h; path = JFWechatMoments/Request/WebImage/WebImageManage.h; sourceTree = SOURCE_ROOT; };
 		C48CDF22274BBA4700A4D74D /* WebImageManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebImageManage.m; path = JFWechatMoments/Request/WebImage/WebImageManage.m; sourceTree = SOURCE_ROOT; };
+		C4B820C1274D25EF005BCC00 /* JFDownloadManagerSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFDownloadManagerSpec.m; sourceTree = "<group>"; };
 		C4BF3F2B2746B4260076B98F /* JFWechatPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFWechatPrefixHeader.pch; sourceTree = "<group>"; };
 		C4BF3F2D2746B61F0076B98F /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 		C4D4BF282749D0860035737F /* install-templates.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "install-templates.sh"; sourceTree = "<group>"; };
 		C4D4BF292749D0860035737F /* uninstall-templates.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "uninstall-templates.sh"; sourceTree = "<group>"; };
-		C4D4BF312749D1210035737F /* NetRequestSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetRequestSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +194,9 @@
 			isa = PBXGroup;
 			children = (
 				563182CE205033190012DA49 /* Info.plist */,
-				C4D4BF312749D1210035737F /* NetRequestSpec.m */,
+				C4B820C1274D25EF005BCC00 /* JFDownloadManagerSpec.m */,
+				C48351E2274D28C4001858FC /* JFDownloadManagerTests.m */,
+				C48351E4274D2F25001858FC /* WebImageManageTests.m */,
 			);
 			path = JFWechatMomentsTests;
 			sourceTree = "<group>";
@@ -477,7 +483,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4D4BF322749D1210035737F /* NetRequestSpec.m in Sources */,
+				C48351E5274D2F25001858FC /* WebImageManageTests.m in Sources */,
+				C4B820C2274D25EF005BCC00 /* JFDownloadManagerSpec.m in Sources */,
+				C48351E3274D28C4001858FC /* JFDownloadManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +571,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 			};
 			name = Debug;
 		};
@@ -611,6 +620,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
