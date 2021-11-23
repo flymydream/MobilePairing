@@ -5,7 +5,6 @@
 
 #import "MomentsPhotoView.h"
 
-
 @interface MomentsPhotoView ()
 
 @property(nonatomic, strong) NSMutableArray *imageViewArray;

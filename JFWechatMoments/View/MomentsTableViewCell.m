@@ -34,30 +34,39 @@
 - (void)setup {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     //添加控件
+    //头像
     _avatarImageView = [[UIImageView alloc] init];
 
+    //昵称
     _nickLabel = [[UILabel alloc] init];
     _nickLabel.font = [UIFont systemFontOfSize:14];
     _nickLabel.textColor = [UIColor colorWithRed:77 / 255.0 green:93 / 255.0 blue:136 / 255.0 alpha:1.0];
 
+    //内容
     _contentLabel = [[UILabel alloc] init];
     _contentLabel.font = [UIFont systemFontOfSize:15];
     _contentLabel.numberOfLines = 0;
     _moreButton = [[UIButton alloc] init];
+    
+    //查看全文按钮
     [_moreButton setTitle:@"全文" forState:UIControlStateNormal];
     [_moreButton setTitleColor:[UIColor colorWithRed:77 / 255.0 green:93 / 255.0 blue:136 / 255.0 alpha:1.0] forState:UIControlStateNormal];
     [_moreButton addTarget:self action:@selector(clickedMoreButton) forControlEvents:UIControlEventTouchUpInside];
     _moreButton.titleLabel.font = [UIFont systemFontOfSize:14];
 
+    //展示图片视图
     _photoView = [[MomentsPhotoView alloc] init];
 
+    //时间
     _timeLabel = [[UILabel alloc] init];
     _timeLabel.font = [UIFont systemFontOfSize:13];
     _timeLabel.textColor = [UIColor colorWithRed:103 / 255.0 green:103 / 255.0 blue:103 / 255.0 alpha:1.0];
 
+    //评论按钮
     _operateButton = [[UIButton alloc] init];
     [_operateButton setImage:[UIImage imageNamed:@"btn_operate"] forState:UIControlStateNormal];
 
+    //评论视图
     _commentView = [[MomentsCommentView alloc] init];
 
     NSArray *subViews = @[_avatarImageView, _nickLabel, _contentLabel, _moreButton, _photoView, _timeLabel, _operateButton, _commentView];
@@ -75,6 +84,7 @@
 
 - (void)setTweetModel:(Tweet *)tweetModel {
     _tweetModel = tweetModel;
+    
     _commentView.comments = _tweetModel.comments;
     _nickLabel.text = _tweetModel.sender.nick;
     _contentLabel.text = _tweetModel.content;

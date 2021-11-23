@@ -67,8 +67,6 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
 }
 
 - (void)requestData {
-//    _allTweets = [[NSMutableArray alloc] init];
-//    _tweetsArray = [[NSMutableArray alloc] init];
     [self requestUserInfo];
     [self requestTweets];
 }
@@ -138,7 +136,7 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
          [self.tableView.mj_footer endRefreshingWithNoMoreData];
       }
       [self.tableView reloadData];
-  };
+    };
 }
 
 - (void)refresh {
