@@ -6,10 +6,7 @@
 #import "MomentsTableViewCell.h"
 #import "MomentsPhotoView.h"
 #import "MomentsCommentView.h"
-#import "UIView+SDAutoLayout.h"
 #import "Tweet.h"
-#import "UIImageView+Web.h"
-#import "UIImage+Color.h"
 
 @interface MomentsTableViewCell ()
 //UI控件

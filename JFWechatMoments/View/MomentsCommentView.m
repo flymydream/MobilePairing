@@ -4,7 +4,6 @@
 //
 
 #import "MomentsCommentView.h"
-#import "UIView+SDAutoLayout.h"
 #import "Comment.h"
 
 @interface MomentsCommentView ()

@@ -4,9 +4,7 @@
 //
 
 #import "MomentsPhotoView.h"
-#import "UIView+SDAutoLayout.h"
-#import "UIImageView+Web.h"
-#import "UIImage+Color.h"
+
 
 @interface MomentsPhotoView ()
 

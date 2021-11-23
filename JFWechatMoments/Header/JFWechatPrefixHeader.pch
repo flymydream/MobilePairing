@@ -9,15 +9,16 @@
 #ifndef JFWechatPrefixHeader_h
 #define JFWechatPrefixHeader_h
 
-#import "UITableView+SDAutoTableViewCellHeight.h"
+
 #import "MJRefresh.h"
-#import "UIImageView+Web.h"
-#import "UIImage+Color.h"
-#import "UIScrollView+EmptyDataSet.h"
 #import "MJExtension.h"
 #import "Config.h"
 #import "NetRequest.h"
 #import "MacroDefinition.h"
 
+#import "UIImage+Color.h"
+#import "UIImageView+Web.h"
+#import "UIScrollView+EmptyDataSet.h"
+#import "UITableView+SDAutoTableViewCellHeight.h"
 
 #endif /* JFWechatPrefixHeader_h */
