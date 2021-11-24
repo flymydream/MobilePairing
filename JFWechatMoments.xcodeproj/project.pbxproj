@@ -27,6 +27,8 @@
 		79DD82A040C12ED4F8226F19 /* libPods-JFWechatMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD74207EF28B2D35FFA0976 /* libPods-JFWechatMoments.a */; };
 		C48351E3274D28C4001858FC /* JFDownloadManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C48351E2274D28C4001858FC /* JFDownloadManagerTests.m */; };
 		C48351E5274D2F25001858FC /* WebImageManageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C48351E4274D2F25001858FC /* WebImageManageTests.m */; };
+		C48351EB274DE720001858FC /* JFPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = C48351EA274DE720001858FC /* JFPhotoBrowser.m */; };
+		C48351EE274DED8C001858FC /* PhotoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C48351ED274DED8C001858FC /* PhotoImageView.m */; };
 		C48CDF1D274BB14700A4D74D /* JFDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C48CDF1C274BB14700A4D74D /* JFDownloadManager.m */; };
 		C48CDF23274BBA4700A4D74D /* WebImageManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C48CDF22274BBA4700A4D74D /* WebImageManage.m */; };
 		C4B820C2274D25EF005BCC00 /* JFDownloadManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B820C1274D25EF005BCC00 /* JFDownloadManagerSpec.m */; };
@@ -88,6 +90,10 @@
 		BEB3FBCBC474EF0CD9CD3643 /* Pods-JFWechatMomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFWechatMomentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JFWechatMomentsTests/Pods-JFWechatMomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C48351E2274D28C4001858FC /* JFDownloadManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFDownloadManagerTests.m; sourceTree = "<group>"; };
 		C48351E4274D2F25001858FC /* WebImageManageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebImageManageTests.m; sourceTree = "<group>"; };
+		C48351E9274DE720001858FC /* JFPhotoBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFPhotoBrowser.h; sourceTree = "<group>"; };
+		C48351EA274DE720001858FC /* JFPhotoBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFPhotoBrowser.m; sourceTree = "<group>"; };
+		C48351EC274DED8C001858FC /* PhotoImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoImageView.h; sourceTree = "<group>"; };
+		C48351ED274DED8C001858FC /* PhotoImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoImageView.m; sourceTree = "<group>"; };
 		C48CDF1B274BB14700A4D74D /* JFDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFDownloadManager.h; sourceTree = "<group>"; };
 		C48CDF1C274BB14700A4D74D /* JFDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFDownloadManager.m; sourceTree = "<group>"; };
 		C48CDF21274BBA4700A4D74D /* WebImageManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebImageManage.h; path = JFWechatMoments/Request/WebImage/WebImageManage.h; sourceTree = SOURCE_ROOT; };
@@ -122,6 +128,7 @@
 		011FF4DD2050CB03002C1EE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C48351E8274DE6E7001858FC /* BrowserView */,
 				011FF4DE2050CB20002C1EE6 /* MomentsTableViewCell.h */,
 				011FF4DF2050CB20002C1EE6 /* MomentsTableViewCell.m */,
 				011FF4E12050D14C002C1EE6 /* MomentsPhotoView.h */,
@@ -265,6 +272,17 @@
 				6564707A1992CFE800E77320 /* Pods-JFWechatMomentsTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C48351E8274DE6E7001858FC /* BrowserView */ = {
+			isa = PBXGroup;
+			children = (
+				C48351E9274DE720001858FC /* JFPhotoBrowser.h */,
+				C48351EA274DE720001858FC /* JFPhotoBrowser.m */,
+				C48351EC274DED8C001858FC /* PhotoImageView.h */,
+				C48351ED274DED8C001858FC /* PhotoImageView.m */,
+			);
+			path = BrowserView;
 			sourceTree = "<group>";
 		};
 		C48CDF1A274BB10A00A4D74D /* CacheWebImage */ = {
@@ -469,9 +487,11 @@
 				563182F32050535B0012DA49 /* Comment.m in Sources */,
 				564B91F72054F11E00AC85C9 /* UIImageView+Web.m in Sources */,
 				563182F6205053D60012DA49 /* Tweet.m in Sources */,
+				C48351EB274DE720001858FC /* JFPhotoBrowser.m in Sources */,
 				564B91F12054EFF200AC85C9 /* UIImage+Color.m in Sources */,
 				563182C3205033180012DA49 /* main.m in Sources */,
 				563182B5205033180012DA49 /* AppDelegate.m in Sources */,
+				C48351EE274DED8C001858FC /* PhotoImageView.m in Sources */,
 				563182E02050396B0012DA49 /* NetRequest.m in Sources */,
 				011FF4E32050D14C002C1EE6 /* MomentsPhotoView.m in Sources */,
 				011FF4E02050CB20002C1EE6 /* MomentsTableViewCell.m in Sources */,

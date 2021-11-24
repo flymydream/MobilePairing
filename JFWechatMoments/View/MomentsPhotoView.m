@@ -4,6 +4,8 @@
 //
 
 #import "MomentsPhotoView.h"
+#import "JFPhotoBrowser.h"
+#import "PhotoImageView.h"
 
 @interface MomentsPhotoView ()
 
@@ -55,11 +57,15 @@
         NSInteger columnIndex = i % perRowItemCount;
         NSInteger rowIndex = i / perRowItemCount;
         UIImageView *imageView = _imageViewArray[i];
+        imageView.userInteractionEnabled = YES;
         imageView.hidden = NO;
         imageView.frame = CGRectMake(columnIndex * (itemW + 5), rowIndex * (itemH + 5), itemW, itemH);
         NSDictionary *urlDic = imageArray[i];
 //        [imageView jf_setImageWithURL:urlDic[@"url"] placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
         [imageView jf_setImageWithUrl:urlDic[@"url"] placeholderImage:[UIImage imageWithColor:[UIColor colorWithRed:234 / 255.0 green:234 / 255.0 blue:234 / 255.0 alpha:1.0]]];
+        //添加单击事件
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photoTapClick:)];
+        [imageView addGestureRecognizer:tapGesture];
     }
     CGFloat width = perRowItemCount * itemW + (perRowItemCount - 1) * 5;
     int rowCount = ceilf(imageArray.count * 1.0 / perRowItemCount);
@@ -88,6 +94,28 @@
         default:
             return 3;
     }
+}
+
+#pragma mark-单击图片
+
+- (void)photoTapClick:(UITapGestureRecognizer *)photoTap {
+    
+    NSMutableArray *photosArray = [NSMutableArray array];
+    for (int i=0; i<self.imageArray.count; i++) {
+        UIImageView *imageView = self.imageViewArray[i];
+        PhotoImageView *photoImageView = [[PhotoImageView alloc] init];
+        //1.1设置原始imageView
+        photoImageView.sourceImageView = imageView;
+        NSDictionary *urlDic = self.imageArray[i];
+        photoImageView.imageUrl = urlDic[@"url"];
+        photoImageView.tag = i;
+        [photosArray addObject:photoImageView];
+        
+    }
+    JFPhotoBrowser *photoBrowser = [JFPhotoBrowser photoBrowser];
+    photoBrowser.photosArray = photosArray;
+    photoBrowser.currentIndex = (int)photoTap.view.tag;
+    [photoBrowser showPhotos];
 }
 
 @end

@@ -13,6 +13,8 @@
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 
+#define KKeyWindow [UIApplication sharedApplication].keyWindow
+
 #define IsBangsScreen ([[UIApplication sharedApplication] statusBarFrame].size.height>20?YES:NO)
 #define kStatuBarHeight  ([[UIApplication sharedApplication] statusBarFrame].size.height)
 
@@ -42,7 +44,6 @@ object:nil];
 #define NOTIFY_POST(_notifyName)   [[NSNotificationCenter defaultCenter] postNotificationName:_notifyName object:nil];
 //发送通知，带参数
 #define NOTIFY_POST_PARAMENT(_notiyName,dict) [[NSNotificationCenter defaultCenter]postNotificationName:_notiyName object:nil userInfo:dict];
-
 
 
 
