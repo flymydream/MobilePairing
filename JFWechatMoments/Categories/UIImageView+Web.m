@@ -5,7 +5,7 @@
 
 #import "UIImageView+Web.h"
 #import "WebImageManage.h"
-#import "JFDownloadManager.h"
+
 
 @implementation UIImageView (Web)
 

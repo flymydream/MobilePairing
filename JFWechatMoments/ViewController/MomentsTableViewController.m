@@ -221,6 +221,14 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     [self requestTweets];
 }
 
+#pragma mark-收到内存警告
+
+- (void)didReceiveMemoryWarning {
+   [super didReceiveMemoryWarning];
+   [[JFDownloadManager shareDownloadManage].imageCache removeAllObjects];
+   [[JFDownloadManager shareDownloadManage].queue cancelAllOperations];
+}
+
 - (void)dealloc {
     NOTIFY_REMOVE(Nofication_RefreshTableView);
 }

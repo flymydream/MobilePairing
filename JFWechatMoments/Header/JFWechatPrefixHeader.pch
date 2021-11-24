@@ -16,6 +16,7 @@
 #import "AFNetworking.h"
 #import "NetRequest.h"
 #import "MacroDefinition.h"
+#import "JFDownloadManager.h"
 
 #import "UIImage+Color.h"
 #import "UIImageView+Web.h"

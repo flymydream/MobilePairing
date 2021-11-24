@@ -10,14 +10,6 @@
 
 @interface JFDownloadManager ()
 /**
- 图片内存缓存
- */
-@property (nonatomic, strong) NSCache *imageCache;
-/**
- 下载队列
- */
-@property (nonatomic, strong) NSOperationQueue *queue;
-/**
  操作缓存字典
  */
 @property (nonatomic, strong) NSMutableDictionary *operationsMutableDict;
@@ -105,7 +97,7 @@
                     //回到主线程刷新
                     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                         NOTIFY_POST(Nofication_RefreshTableView);
-                        completeCallback(placeholderImage);
+                    
                         
                     }];
                     

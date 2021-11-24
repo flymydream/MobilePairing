@@ -10,7 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @interface JFDownloadManager : NSObject
-
+/**
+ 图片内存缓存
+ */
+@property (nonatomic, strong) NSCache *imageCache;
+/**
+ 下载队列
+ */
+@property (nonatomic, strong) NSOperationQueue *queue;
 /**
 设置单利
  */
