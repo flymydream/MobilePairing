@@ -126,6 +126,7 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     }];
 
     kWeakSelf(self);
+//    __weak typeof(self) weakSelf = self;
     _tweetsSuccessBlock = ^(id response) {
       kStrongSelf(self);
       self.tableView.mj_footer.hidden = NO;
@@ -168,7 +169,9 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
         } else {
             tweet.shouldShowMoreButton = NO;
         }
-        [self.allTweetsArray addObject:tweet];
+        if (tweet.sender.avatar.length > 0 && tweet.content.length > 0) {
+            [self.allTweetsArray addObject:tweet];
+        }
     }
     return self.allTweetsArray.count;
 }

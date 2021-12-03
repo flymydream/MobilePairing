@@ -128,6 +128,7 @@
 #pragma mark-双击图片
 
 - (void)photoDoubleClick:(UITapGestureRecognizer *)photoDoubleTap {
+    NSLog(@"photoDoubleClick");
     [UIView animateWithDuration:0.3 animations:^{
         UIScrollView *scrollView = (UIScrollView *)photoDoubleTap.view.superview;
         scrollView.zoomScale = 3.0;
