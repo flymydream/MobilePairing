@@ -26,7 +26,10 @@ describe(@"JFDownloadManager", ^{
                 [[expectFutureValue(picImage) shouldEventually] beNonNil];
             }];
         });
+ 
+        
     });
+   
 });
 
 SPEC_END
