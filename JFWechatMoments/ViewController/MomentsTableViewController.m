@@ -115,7 +115,6 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
         NSLog(@"请求失败%@", error);
     }];
 }
-
 - (void)requestTweets {
     [NetRequest requestGetWithUrl:UserTweetsUrl success:^(id response) {
         NSArray *allTweet = [Tweet mj_objectArrayWithKeyValuesArray:response];
@@ -124,7 +123,6 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     } failure:^(NSError *error) {
         NSLog(@"请求失败%@", error);
     }];
-
     kWeakSelf(self);
 //    __weak typeof(self) weakSelf = self;
     _tweetsSuccessBlock = ^(id response) {
