@@ -42,9 +42,7 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     }
     return _tweetsArray;
 }
-/**
- 有效数据懒加载
- */
+/**有效数据懒加载*/
 - (NSMutableArray *)allTweetsArray{
     if (!_allTweetsArray) {
         _allTweetsArray = [[NSMutableArray alloc] init];
