@@ -66,6 +66,7 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     }
 }
 
+//请求数据的方法
 - (void)requestData {
     [self requestUserInfo];
     [self requestTweets];
