@@ -34,6 +34,8 @@
 		C4B820C2274D25EF005BCC00 /* JFDownloadManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B820C1274D25EF005BCC00 /* JFDownloadManagerSpec.m */; };
 		C4D4BF2D2749D0860035737F /* install-templates.sh in Resources */ = {isa = PBXBuildFile; fileRef = C4D4BF282749D0860035737F /* install-templates.sh */; };
 		C4D4BF2E2749D0860035737F /* uninstall-templates.sh in Resources */ = {isa = PBXBuildFile; fileRef = C4D4BF292749D0860035737F /* uninstall-templates.sh */; };
+		C4E7F4E927661956005EED20 /* UIViewController+CurrentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F4E727661956005EED20 /* UIViewController+CurrentVC.m */; };
+		C4E7F4EC2766199B005EED20 /* FloatEffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F4EB2766199B005EED20 /* FloatEffectView.m */; };
 		C50AFA72181324C2D70B133D /* libPods-JFWechatMomentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A65DFE617555CFE906F6CF22 /* libPods-JFWechatMomentsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,10 @@
 		C4BF3F2D2746B61F0076B98F /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 		C4D4BF282749D0860035737F /* install-templates.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "install-templates.sh"; sourceTree = "<group>"; };
 		C4D4BF292749D0860035737F /* uninstall-templates.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "uninstall-templates.sh"; sourceTree = "<group>"; };
+		C4E7F4E727661956005EED20 /* UIViewController+CurrentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CurrentVC.m"; sourceTree = "<group>"; };
+		C4E7F4E827661956005EED20 /* UIViewController+CurrentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CurrentVC.h"; sourceTree = "<group>"; };
+		C4E7F4EA2766199B005EED20 /* FloatEffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatEffectView.h; sourceTree = "<group>"; };
+		C4E7F4EB2766199B005EED20 /* FloatEffectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatEffectView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,8 @@
 		011FF4DD2050CB03002C1EE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4E7F4EA2766199B005EED20 /* FloatEffectView.h */,
+				C4E7F4EB2766199B005EED20 /* FloatEffectView.m */,
 				C48351E8274DE6E7001858FC /* BrowserView */,
 				011FF4DE2050CB20002C1EE6 /* MomentsTableViewCell.h */,
 				011FF4DF2050CB20002C1EE6 /* MomentsTableViewCell.m */,
@@ -253,6 +261,8 @@
 		564B91EE2054EF7100AC85C9 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C4E7F4E827661956005EED20 /* UIViewController+CurrentVC.h */,
+				C4E7F4E727661956005EED20 /* UIViewController+CurrentVC.m */,
 				564B91F62054F11E00AC85C9 /* UIImageView+Web.h */,
 				564B91F52054F11E00AC85C9 /* UIImageView+Web.m */,
 				564B91EF2054EFF200AC85C9 /* UIImage+Color.h */,
@@ -492,9 +502,11 @@
 				563182C3205033180012DA49 /* main.m in Sources */,
 				563182B5205033180012DA49 /* AppDelegate.m in Sources */,
 				C48351EE274DED8C001858FC /* PhotoImageView.m in Sources */,
+				C4E7F4E927661956005EED20 /* UIViewController+CurrentVC.m in Sources */,
 				563182E02050396B0012DA49 /* NetRequest.m in Sources */,
 				011FF4E32050D14C002C1EE6 /* MomentsPhotoView.m in Sources */,
 				011FF4E02050CB20002C1EE6 /* MomentsTableViewCell.m in Sources */,
+				C4E7F4EC2766199B005EED20 /* FloatEffectView.m in Sources */,
 				564B91FD20556E7B00AC85C9 /* MomentsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
