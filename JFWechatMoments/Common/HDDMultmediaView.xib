@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HDDMultmediaView">
+            <connections>
+                <outlet property="addBtn" destination="qH1-f7-dIJ" id="O1a-c4-d03"/>
+                <outlet property="innerView" destination="iN0-l3-epB" id="gYe-Xc-QZr"/>
+                <outlet property="selectedBgView" destination="Q9Q-Iv-3hP" id="1qq-Yh-BDc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="502" height="93"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9Q-Iv-3hP">
+                    <rect key="frame" x="0.0" y="0.0" width="502" height="93"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH1-f7-dIJ">
+                            <rect key="frame" x="5" y="11.5" width="108" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="BSC-QU-46d"/>
+                                <constraint firstAttribute="width" constant="108" id="hF1-hc-MTC"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="selected_pic"/>
+                            <connections>
+                                <action selector="addAction:" destination="-1" eventType="touchUpInside" id="Yej-b7-m8a"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="qH1-f7-dIJ" firstAttribute="leading" secondItem="Q9Q-Iv-3hP" secondAttribute="leading" constant="5" id="5AX-82-yKw"/>
+                        <constraint firstItem="qH1-f7-dIJ" firstAttribute="centerY" secondItem="Q9Q-Iv-3hP" secondAttribute="centerY" id="LUP-cd-OVa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Q9Q-Iv-3hP" secondAttribute="trailing" id="Nr5-Ne-76Z"/>
+                <constraint firstItem="Q9Q-Iv-3hP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QvK-bh-4zH"/>
+                <constraint firstAttribute="bottom" secondItem="Q9Q-Iv-3hP" secondAttribute="bottom" id="U3P-kc-woY"/>
+                <constraint firstItem="Q9Q-Iv-3hP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UeD-Qo-Fk6"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-668" y="-370"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="selected_pic" width="74" height="74"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

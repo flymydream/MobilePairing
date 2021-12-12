@@ -36,6 +36,116 @@
 		C4D4BF2E2749D0860035737F /* uninstall-templates.sh in Resources */ = {isa = PBXBuildFile; fileRef = C4D4BF292749D0860035737F /* uninstall-templates.sh */; };
 		C4E7F4E927661956005EED20 /* UIViewController+CurrentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F4E727661956005EED20 /* UIViewController+CurrentVC.m */; };
 		C4E7F4EC2766199B005EED20 /* FloatEffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F4EB2766199B005EED20 /* FloatEffectView.m */; };
+		C4E7F516276620C7005EED20 /* UIViewController+ImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F4EE276620C6005EED20 /* UIViewController+ImagePicker.m */; };
+		C4E7F517276620C7005EED20 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F4EF276620C6005EED20 /* UIViewController+HUD.m */; };
+		C4E7F518276620C7005EED20 /* UIButton+DSImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F4F2276620C6005EED20 /* UIButton+DSImageTitleSpacing.m */; };
+		C4E7F519276620C7005EED20 /* SDAnimatedImageView+displayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F4F5276620C6005EED20 /* SDAnimatedImageView+displayLayer.m */; };
+		C4E7F51A276620C7005EED20 /* MBProgressHUD+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F4F8276620C6005EED20 /* MBProgressHUD+GIF.m */; };
+		C4E7F51B276620C7005EED20 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F4FA276620C6005EED20 /* UIImage+Extension.m */; };
+		C4E7F51C276620C7005EED20 /* UILabel+fontSize.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F501276620C6005EED20 /* UILabel+fontSize.m */; };
+		C4E7F51D276620C7005EED20 /* MBProgressHUD+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F502276620C6005EED20 /* MBProgressHUD+Message.m */; };
+		C4E7F51E276620C7005EED20 /* HDDWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F506276620C6005EED20 /* HDDWeakScriptMessageDelegate.m */; };
+		C4E7F51F276620C7005EED20 /* UIViewController+CurrentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F508276620C6005EED20 /* UIViewController+CurrentVC.m */; };
+		C4E7F520276620C7005EED20 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F509276620C6005EED20 /* UIColor+Extension.m */; };
+		C4E7F521276620C7005EED20 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F50A276620C6005EED20 /* NSString+Extension.m */; };
+		C4E7F522276620C7005EED20 /* UIDevice+DeviceExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F50C276620C6005EED20 /* UIDevice+DeviceExtension.m */; };
+		C4E7F523276620C7005EED20 /* UIControl+GcEventHander.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F50D276620C6005EED20 /* UIControl+GcEventHander.m */; };
+		C4E7F524276620C7005EED20 /* UIButton+EventInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F50E276620C6005EED20 /* UIButton+EventInterval.m */; };
+		C4E7F525276620C7005EED20 /* UIView+netError.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F510276620C6005EED20 /* UIView+netError.m */; };
+		C4E7F526276620C7005EED20 /* UITextField+ExtentRange.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F512276620C6005EED20 /* UITextField+ExtentRange.m */; };
+		C4E7F527276620C7005EED20 /* UIView+TapGes.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F513276620C6005EED20 /* UIView+TapGes.m */; };
+		C4E7F528276620C7005EED20 /* UIView+sizeAndRound.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F514276620C6005EED20 /* UIView+sizeAndRound.m */; };
+		C4E7F529276620C7005EED20 /* NSDate+TimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F515276620C6005EED20 /* NSDate+TimeStamp.m */; };
+		C4E7F5C6276620F1005EED20 /* HDDCoordinateTransformation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F52D276620F0005EED20 /* HDDCoordinateTransformation.m */; };
+		C4E7F5C7276620F1005EED20 /* HDDLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F52E276620F0005EED20 /* HDDLocationTool.m */; };
+		C4E7F5C8276620F1005EED20 /* HDDRegularCheckTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F531276620F0005EED20 /* HDDRegularCheckTool.m */; };
+		C4E7F5C9276620F1005EED20 /* HDDNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F534276620F0005EED20 /* HDDNumberTool.m */; };
+		C4E7F5CA276620F1005EED20 /* HDDRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F537276620F0005EED20 /* HDDRefreshFooter.m */; };
+		C4E7F5CB276620F1005EED20 /* HDDRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F538276620F0005EED20 /* HDDRefreshHeader.m */; };
+		C4E7F5CC276620F1005EED20 /* EnvironmentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F53C276620F0005EED20 /* EnvironmentTool.m */; };
+		C4E7F5CD276620F1005EED20 /* HDDCustomToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F53F276620F0005EED20 /* HDDCustomToastView.m */; };
+		C4E7F5CE276620F1005EED20 /* HDDInputCheckTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F542276620F0005EED20 /* HDDInputCheckTool.m */; };
+		C4E7F5CF276620F1005EED20 /* HDDUploadFileClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F545276620F0005EED20 /* HDDUploadFileClass.m */; };
+		C4E7F5D0276620F1005EED20 /* AFNetworkRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F546276620F0005EED20 /* AFNetworkRequestTool.m */; };
+		C4E7F5D1276620F1005EED20 /* ZFGenericChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F54C276620F0005EED20 /* ZFGenericChart.m */; };
+		C4E7F5D2276620F1005EED20 /* ZFBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F550276620F0005EED20 /* ZFBarChart.m */; };
+		C4E7F5D3276620F1005EED20 /* ZFBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F551276620F0005EED20 /* ZFBar.m */; };
+		C4E7F5D4276620F1005EED20 /* UIView+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F553276620F0005EED20 /* UIView+Zirkfied.m */; };
+		C4E7F5D5276620F1005EED20 /* UIBezierPath+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F555276620F0005EED20 /* UIBezierPath+Zirkfied.m */; };
+		C4E7F5D6276620F1005EED20 /* UIColor+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F559276620F0005EED20 /* UIColor+Zirkfied.m */; };
+		C4E7F5D7276620F1005EED20 /* NSString+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F55B276620F0005EED20 /* NSString+Zirkfied.m */; };
+		C4E7F5D8276620F1005EED20 /* NSNumber+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F55C276620F0005EED20 /* NSNumber+Zirkfied.m */; };
+		C4E7F5D9276620F1005EED20 /* ZFCirqueChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F55F276620F0005EED20 /* ZFCirqueChart.m */; };
+		C4E7F5DA276620F1005EED20 /* ZFCirque.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F561276620F0005EED20 /* ZFCirque.m */; };
+		C4E7F5DB276620F1005EED20 /* ZFHorizontalAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F563276620F0005EED20 /* ZFHorizontalAxis.m */; };
+		C4E7F5DC276620F1005EED20 /* ZFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F567276620F0005EED20 /* ZFConst.m */; };
+		C4E7F5DD276620F1005EED20 /* ZFMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F56B276620F0005EED20 /* ZFMethod.m */; };
+		C4E7F5DE276620F1005EED20 /* ZFPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F56D276620F0005EED20 /* ZFPieChart.m */; };
+		C4E7F5DF276620F1005EED20 /* ZFPie.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F571276620F0005EED20 /* ZFPie.m */; };
+		C4E7F5E0276620F1005EED20 /* ZFTranslucencePath.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F572276620F0005EED20 /* ZFTranslucencePath.m */; };
+		C4E7F5E1276620F1005EED20 /* ZFLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F575276620F0005EED20 /* ZFLineChart.m */; };
+		C4E7F5E2276620F1005EED20 /* ZFCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F578276620F0005EED20 /* ZFCircle.m */; };
+		C4E7F5E3276620F1005EED20 /* ZFLine.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F579276620F0005EED20 /* ZFLine.m */; };
+		C4E7F5E4276620F1005EED20 /* ZFXAxisLine.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F57C276620F0005EED20 /* ZFXAxisLine.m */; };
+		C4E7F5E5276620F1005EED20 /* ZFYAxisLine.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F57D276620F0005EED20 /* ZFYAxisLine.m */; };
+		C4E7F5E6276620F1005EED20 /* ZFPopoverLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F57F276620F0005EED20 /* ZFPopoverLabel.m */; };
+		C4E7F5E7276620F1005EED20 /* ZFLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F581276620F0005EED20 /* ZFLabel.m */; };
+		C4E7F5E8276620F1005EED20 /* ZFRadar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F584276620F0005EED20 /* ZFRadar.m */; };
+		C4E7F5E9276620F1005EED20 /* ZFPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F585276620F0005EED20 /* ZFPolygon.m */; };
+		C4E7F5EA276620F1005EED20 /* ZFRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F586276620F0005EED20 /* ZFRadarChart.m */; };
+		C4E7F5EB276620F1005EED20 /* ZFGenericAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F58C276620F0005EED20 /* ZFGenericAxis.m */; };
+		C4E7F5EC276620F1005EED20 /* ZFGradientAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F590276620F0005EED20 /* ZFGradientAttribute.m */; };
+		C4E7F5ED276620F1005EED20 /* ZFCurveAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F591276620F0005EED20 /* ZFCurveAttribute.m */; };
+		C4E7F5EE276620F1005EED20 /* ZFWaveChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F595276620F0005EED20 /* ZFWaveChart.m */; };
+		C4E7F5EF276620F1005EED20 /* ZFWave.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F596276620F0005EED20 /* ZFWave.m */; };
+		C4E7F5F0276620F1005EED20 /* ZFHorizontalBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F599276620F0005EED20 /* ZFHorizontalBarChart.m */; };
+		C4E7F5F1276620F1005EED20 /* ZFHorizontalBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F59A276620F0005EED20 /* ZFHorizontalBar.m */; };
+		C4E7F5F2276620F1005EED20 /* HDDLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F59E276620F0005EED20 /* HDDLoadingView.m */; };
+		C4E7F5F3276620F1005EED20 /* HDDCallCameraTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5A1276620F0005EED20 /* HDDCallCameraTool.m */; };
+		C4E7F5F4276620F1005EED20 /* HDDTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5A3276620F0005EED20 /* HDDTimeTool.m */; };
+		C4E7F5F5276620F1005EED20 /* HDDDispatchTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5A4276620F0005EED20 /* HDDDispatchTimer.m */; };
+		C4E7F5F6276620F1005EED20 /* CustomKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5A8276620F0005EED20 /* CustomKeyboard.m */; };
+		C4E7F5F7276620F1005EED20 /* RSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5AB276620F0005EED20 /* RSAUtil.m */; };
+		C4E7F5F8276620F1005EED20 /* HDDUpdateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5AE276620F0005EED20 /* HDDUpdateTool.m */; };
+		C4E7F5F9276620F1005EED20 /* YBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5B2276620F0005EED20 /* YBPopupMenu.m */; };
+		C4E7F5FA276620F1005EED20 /* HDDFreightRulesTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5B5276620F0005EED20 /* HDDFreightRulesTool.m */; };
+		C4E7F5FB276620F1005EED20 /* HDDPaymentTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5B6276620F0005EED20 /* HDDPaymentTools.m */; };
+		C4E7F5FC276620F1005EED20 /* HDDRichTextTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5B9276620F0005EED20 /* HDDRichTextTool.m */; };
+		C4E7F5FD276620F1005EED20 /* HDDCallPhoneTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5BD276620F0005EED20 /* HDDCallPhoneTool.m */; };
+		C4E7F5FE276620F1005EED20 /* XWAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5C1276620F0005EED20 /* XWAlert.m */; };
+		C4E7F5FF276620F1005EED20 /* UIAlertController+AddAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5C2276620F0005EED20 /* UIAlertController+AddAction.m */; };
+		C4E7F600276620F1005EED20 /* HDDMediaViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F5C4276620F0005EED20 /* HDDMediaViewer.m */; };
+		C4E7F63F2766211A005EED20 /* HDDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F60427662119005EED20 /* HDDBaseNavigationController.m */; };
+		C4E7F6402766211A005EED20 /* HDDBaseSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F60727662119005EED20 /* HDDBaseSubViewController.m */; };
+		C4E7F6412766211A005EED20 /* HDDBaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F60827662119005EED20 /* HDDBaseListViewController.m */; };
+		C4E7F6422766211A005EED20 /* HDDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F60A27662119005EED20 /* HDDBaseViewController.m */; };
+		C4E7F6432766211A005EED20 /* HDDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F60C27662119005EED20 /* HDDBaseModel.m */; };
+		C4E7F6442766211A005EED20 /* HDDBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F60F27662119005EED20 /* HDDBaseCell.m */; };
+		C4E7F6452766211A005EED20 /* HDDBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F61127662119005EED20 /* HDDBaseView.m */; };
+		C4E7F6462766211A005EED20 /* HDDBaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F61327662119005EED20 /* HDDBaseTextField.m */; };
+		C4E7F6472766211A005EED20 /* HDDBaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F61427662119005EED20 /* HDDBaseLabel.m */; };
+		C4E7F6482766211A005EED20 /* HDDBaseTabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F61727662119005EED20 /* HDDBaseTabelView.m */; };
+		C4E7F6492766211A005EED20 /* HDDHeaderSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F61C27662119005EED20 /* HDDHeaderSearchView.m */; };
+		C4E7F64A2766211A005EED20 /* HDDBottomPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E7F61D27662119005EED20 /* HDDBottomPickerView.xib */; };
+		C4E7F64B2766211A005EED20 /* HDDBottomPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F61F27662119005EED20 /* HDDBottomPickerView.m */; };
+		C4E7F64C2766211A005EED20 /* HDDSelectedBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F62027662119005EED20 /* HDDSelectedBtn.m */; };
+		C4E7F64D2766211A005EED20 /* HDDUpdateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E7F62127662119005EED20 /* HDDUpdateView.xib */; };
+		C4E7F64E2766211A005EED20 /* HDDInputPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E7F62227662119005EED20 /* HDDInputPopView.xib */; };
+		C4E7F64F2766211A005EED20 /* HDDMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F62427662119005EED20 /* HDDMenuView.m */; };
+		C4E7F6502766211A005EED20 /* HDDCustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F62627662119005EED20 /* HDDCustomTextView.m */; };
+		C4E7F6512766211A005EED20 /* HDDVehicleNumberKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F62B27662119005EED20 /* HDDVehicleNumberKeyBoardView.m */; };
+		C4E7F6522766211A005EED20 /* HDDUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F62F27662119005EED20 /* HDDUpdateView.m */; };
+		C4E7F6532766211A005EED20 /* HDDSelectedTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F63027662119005EED20 /* HDDSelectedTimeView.m */; };
+		C4E7F6542766211A005EED20 /* HDDUploadImageAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F63127662119005EED20 /* HDDUploadImageAlertView.m */; };
+		C4E7F6552766211A005EED20 /* HDDPromptPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E7F63327662119005EED20 /* HDDPromptPopView.xib */; };
+		C4E7F6562766211A005EED20 /* HDDDatePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F63427662119005EED20 /* HDDDatePickView.m */; };
+		C4E7F6572766211A005EED20 /* HDDMultmediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F63527662119005EED20 /* HDDMultmediaView.m */; };
+		C4E7F6582766211A005EED20 /* HDDPromptPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F63627662119005EED20 /* HDDPromptPopView.m */; };
+		C4E7F6592766211A005EED20 /* HDDInputPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F63727662119005EED20 /* HDDInputPopView.m */; };
+		C4E7F65A2766211A005EED20 /* HDDCustomStructureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F63927662119005EED20 /* HDDCustomStructureButton.m */; };
+		C4E7F65B2766211A005EED20 /* HDDMultmediaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E7F63B27662119005EED20 /* HDDMultmediaView.xib */; };
+		C4E7F65C2766211A005EED20 /* HDDCameraWatermarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F63C27662119005EED20 /* HDDCameraWatermarkView.m */; };
+		C4E7F65D2766211A005EED20 /* HDDBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F63E27662119005EED20 /* HDDBottomView.m */; };
 		C50AFA72181324C2D70B133D /* libPods-JFWechatMomentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A65DFE617555CFE906F6CF22 /* libPods-JFWechatMomentsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +219,223 @@
 		C4E7F4E827661956005EED20 /* UIViewController+CurrentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CurrentVC.h"; sourceTree = "<group>"; };
 		C4E7F4EA2766199B005EED20 /* FloatEffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatEffectView.h; sourceTree = "<group>"; };
 		C4E7F4EB2766199B005EED20 /* FloatEffectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatEffectView.m; sourceTree = "<group>"; };
+		C4E7F4EE276620C6005EED20 /* UIViewController+ImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImagePicker.m"; sourceTree = "<group>"; };
+		C4E7F4EF276620C6005EED20 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		C4E7F4F0276620C6005EED20 /* MBProgressHUD+Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Message.h"; sourceTree = "<group>"; };
+		C4E7F4F1276620C6005EED20 /* UIDevice+DeviceExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DeviceExtension.h"; sourceTree = "<group>"; };
+		C4E7F4F2276620C6005EED20 /* UIButton+DSImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DSImageTitleSpacing.m"; sourceTree = "<group>"; };
+		C4E7F4F3276620C6005EED20 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		C4E7F4F4276620C6005EED20 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		C4E7F4F5276620C6005EED20 /* SDAnimatedImageView+displayLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDAnimatedImageView+displayLayer.m"; sourceTree = "<group>"; };
+		C4E7F4F6276620C6005EED20 /* UIViewController+CurrentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CurrentVC.h"; sourceTree = "<group>"; };
+		C4E7F4F7276620C6005EED20 /* HDDWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		C4E7F4F8276620C6005EED20 /* MBProgressHUD+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+GIF.m"; sourceTree = "<group>"; };
+		C4E7F4F9276620C6005EED20 /* UIView+netError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+netError.h"; sourceTree = "<group>"; };
+		C4E7F4FA276620C6005EED20 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		C4E7F4FB276620C6005EED20 /* UIButton+EventInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EventInterval.h"; sourceTree = "<group>"; };
+		C4E7F4FC276620C6005EED20 /* UIControl+GcEventHander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+GcEventHander.h"; sourceTree = "<group>"; };
+		C4E7F4FD276620C6005EED20 /* NSDate+TimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeStamp.h"; sourceTree = "<group>"; };
+		C4E7F4FE276620C6005EED20 /* UIView+sizeAndRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+sizeAndRound.h"; sourceTree = "<group>"; };
+		C4E7F4FF276620C6005EED20 /* UIView+TapGes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TapGes.h"; sourceTree = "<group>"; };
+		C4E7F500276620C6005EED20 /* UITextField+ExtentRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ExtentRange.h"; sourceTree = "<group>"; };
+		C4E7F501276620C6005EED20 /* UILabel+fontSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+fontSize.m"; sourceTree = "<group>"; };
+		C4E7F502276620C6005EED20 /* MBProgressHUD+Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Message.m"; sourceTree = "<group>"; };
+		C4E7F503276620C6005EED20 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
+		C4E7F504276620C6005EED20 /* UIViewController+ImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImagePicker.h"; sourceTree = "<group>"; };
+		C4E7F505276620C6005EED20 /* MBProgressHUD+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+GIF.h"; sourceTree = "<group>"; };
+		C4E7F506276620C6005EED20 /* HDDWeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDWeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		C4E7F507276620C6005EED20 /* SDAnimatedImageView+displayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDAnimatedImageView+displayLayer.h"; sourceTree = "<group>"; };
+		C4E7F508276620C6005EED20 /* UIViewController+CurrentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CurrentVC.m"; sourceTree = "<group>"; };
+		C4E7F509276620C6005EED20 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		C4E7F50A276620C6005EED20 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		C4E7F50B276620C6005EED20 /* UIButton+DSImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DSImageTitleSpacing.h"; sourceTree = "<group>"; };
+		C4E7F50C276620C6005EED20 /* UIDevice+DeviceExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DeviceExtension.m"; sourceTree = "<group>"; };
+		C4E7F50D276620C6005EED20 /* UIControl+GcEventHander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+GcEventHander.m"; sourceTree = "<group>"; };
+		C4E7F50E276620C6005EED20 /* UIButton+EventInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EventInterval.m"; sourceTree = "<group>"; };
+		C4E7F50F276620C6005EED20 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		C4E7F510276620C6005EED20 /* UIView+netError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+netError.m"; sourceTree = "<group>"; };
+		C4E7F511276620C6005EED20 /* UILabel+fontSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+fontSize.h"; sourceTree = "<group>"; };
+		C4E7F512276620C6005EED20 /* UITextField+ExtentRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ExtentRange.m"; sourceTree = "<group>"; };
+		C4E7F513276620C6005EED20 /* UIView+TapGes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TapGes.m"; sourceTree = "<group>"; };
+		C4E7F514276620C6005EED20 /* UIView+sizeAndRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+sizeAndRound.m"; sourceTree = "<group>"; };
+		C4E7F515276620C6005EED20 /* NSDate+TimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeStamp.m"; sourceTree = "<group>"; };
+		C4E7F52C276620F0005EED20 /* HDDLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDLocationTool.h; sourceTree = "<group>"; };
+		C4E7F52D276620F0005EED20 /* HDDCoordinateTransformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDCoordinateTransformation.m; sourceTree = "<group>"; };
+		C4E7F52E276620F0005EED20 /* HDDLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDLocationTool.m; sourceTree = "<group>"; };
+		C4E7F52F276620F0005EED20 /* HDDCoordinateTransformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDCoordinateTransformation.h; sourceTree = "<group>"; };
+		C4E7F531276620F0005EED20 /* HDDRegularCheckTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDRegularCheckTool.m; sourceTree = "<group>"; };
+		C4E7F532276620F0005EED20 /* HDDRegularCheckTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDRegularCheckTool.h; sourceTree = "<group>"; };
+		C4E7F534276620F0005EED20 /* HDDNumberTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDNumberTool.m; sourceTree = "<group>"; };
+		C4E7F535276620F0005EED20 /* HDDNumberTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDNumberTool.h; sourceTree = "<group>"; };
+		C4E7F537276620F0005EED20 /* HDDRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDRefreshFooter.m; sourceTree = "<group>"; };
+		C4E7F538276620F0005EED20 /* HDDRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDRefreshHeader.m; sourceTree = "<group>"; };
+		C4E7F539276620F0005EED20 /* HDDRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDRefreshHeader.h; sourceTree = "<group>"; };
+		C4E7F53A276620F0005EED20 /* HDDRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDRefreshFooter.h; sourceTree = "<group>"; };
+		C4E7F53C276620F0005EED20 /* EnvironmentTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvironmentTool.m; sourceTree = "<group>"; };
+		C4E7F53D276620F0005EED20 /* EnvironmentTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentTool.h; sourceTree = "<group>"; };
+		C4E7F53F276620F0005EED20 /* HDDCustomToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDCustomToastView.m; sourceTree = "<group>"; };
+		C4E7F540276620F0005EED20 /* HDDCustomToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDCustomToastView.h; sourceTree = "<group>"; };
+		C4E7F542276620F0005EED20 /* HDDInputCheckTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDInputCheckTool.m; sourceTree = "<group>"; };
+		C4E7F543276620F0005EED20 /* HDDInputCheckTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDInputCheckTool.h; sourceTree = "<group>"; };
+		C4E7F545276620F0005EED20 /* HDDUploadFileClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDUploadFileClass.m; sourceTree = "<group>"; };
+		C4E7F546276620F0005EED20 /* AFNetworkRequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkRequestTool.m; sourceTree = "<group>"; };
+		C4E7F547276620F0005EED20 /* HDDUploadFileClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDUploadFileClass.h; sourceTree = "<group>"; };
+		C4E7F548276620F0005EED20 /* AFNetworkRequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkRequestTool.h; sourceTree = "<group>"; };
+		C4E7F54B276620F0005EED20 /* ZFGenericChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFGenericChart.h; sourceTree = "<group>"; };
+		C4E7F54C276620F0005EED20 /* ZFGenericChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFGenericChart.m; sourceTree = "<group>"; };
+		C4E7F54E276620F0005EED20 /* ZFBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFBarChart.h; sourceTree = "<group>"; };
+		C4E7F54F276620F0005EED20 /* ZFBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFBar.h; sourceTree = "<group>"; };
+		C4E7F550276620F0005EED20 /* ZFBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFBarChart.m; sourceTree = "<group>"; };
+		C4E7F551276620F0005EED20 /* ZFBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFBar.m; sourceTree = "<group>"; };
+		C4E7F553276620F0005EED20 /* UIView+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Zirkfied.m"; sourceTree = "<group>"; };
+		C4E7F554276620F0005EED20 /* UIColor+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Zirkfied.h"; sourceTree = "<group>"; };
+		C4E7F555276620F0005EED20 /* UIBezierPath+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Zirkfied.m"; sourceTree = "<group>"; };
+		C4E7F556276620F0005EED20 /* NSString+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Zirkfied.h"; sourceTree = "<group>"; };
+		C4E7F557276620F0005EED20 /* NSNumber+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Zirkfied.h"; sourceTree = "<group>"; };
+		C4E7F558276620F0005EED20 /* UIView+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Zirkfied.h"; sourceTree = "<group>"; };
+		C4E7F559276620F0005EED20 /* UIColor+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Zirkfied.m"; sourceTree = "<group>"; };
+		C4E7F55A276620F0005EED20 /* UIBezierPath+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Zirkfied.h"; sourceTree = "<group>"; };
+		C4E7F55B276620F0005EED20 /* NSString+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Zirkfied.m"; sourceTree = "<group>"; };
+		C4E7F55C276620F0005EED20 /* NSNumber+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Zirkfied.m"; sourceTree = "<group>"; };
+		C4E7F55E276620F0005EED20 /* ZFCirque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFCirque.h; sourceTree = "<group>"; };
+		C4E7F55F276620F0005EED20 /* ZFCirqueChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFCirqueChart.m; sourceTree = "<group>"; };
+		C4E7F560276620F0005EED20 /* ZFCirqueChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFCirqueChart.h; sourceTree = "<group>"; };
+		C4E7F561276620F0005EED20 /* ZFCirque.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFCirque.m; sourceTree = "<group>"; };
+		C4E7F563276620F0005EED20 /* ZFHorizontalAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFHorizontalAxis.m; sourceTree = "<group>"; };
+		C4E7F564276620F0005EED20 /* ZFHorizontalAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFHorizontalAxis.h; sourceTree = "<group>"; };
+		C4E7F566276620F0005EED20 /* ZFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFColor.h; sourceTree = "<group>"; };
+		C4E7F567276620F0005EED20 /* ZFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFConst.m; sourceTree = "<group>"; };
+		C4E7F568276620F0005EED20 /* ZFChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFChart.h; sourceTree = "<group>"; };
+		C4E7F569276620F0005EED20 /* ZFMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFMethod.h; sourceTree = "<group>"; };
+		C4E7F56A276620F0005EED20 /* ZFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFConst.h; sourceTree = "<group>"; };
+		C4E7F56B276620F0005EED20 /* ZFMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFMethod.m; sourceTree = "<group>"; };
+		C4E7F56D276620F0005EED20 /* ZFPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPieChart.m; sourceTree = "<group>"; };
+		C4E7F56E276620F0005EED20 /* ZFPie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPie.h; sourceTree = "<group>"; };
+		C4E7F56F276620F0005EED20 /* ZFTranslucencePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFTranslucencePath.h; sourceTree = "<group>"; };
+		C4E7F570276620F0005EED20 /* ZFPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPieChart.h; sourceTree = "<group>"; };
+		C4E7F571276620F0005EED20 /* ZFPie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPie.m; sourceTree = "<group>"; };
+		C4E7F572276620F0005EED20 /* ZFTranslucencePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFTranslucencePath.m; sourceTree = "<group>"; };
+		C4E7F574276620F0005EED20 /* ZFCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFCircle.h; sourceTree = "<group>"; };
+		C4E7F575276620F0005EED20 /* ZFLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFLineChart.m; sourceTree = "<group>"; };
+		C4E7F576276620F0005EED20 /* ZFLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFLine.h; sourceTree = "<group>"; };
+		C4E7F577276620F0005EED20 /* ZFLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFLineChart.h; sourceTree = "<group>"; };
+		C4E7F578276620F0005EED20 /* ZFCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFCircle.m; sourceTree = "<group>"; };
+		C4E7F579276620F0005EED20 /* ZFLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFLine.m; sourceTree = "<group>"; };
+		C4E7F57B276620F0005EED20 /* ZFPopoverLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPopoverLabel.h; sourceTree = "<group>"; };
+		C4E7F57C276620F0005EED20 /* ZFXAxisLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFXAxisLine.m; sourceTree = "<group>"; };
+		C4E7F57D276620F0005EED20 /* ZFYAxisLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFYAxisLine.m; sourceTree = "<group>"; };
+		C4E7F57E276620F0005EED20 /* ZFLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFLabel.h; sourceTree = "<group>"; };
+		C4E7F57F276620F0005EED20 /* ZFPopoverLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPopoverLabel.m; sourceTree = "<group>"; };
+		C4E7F580276620F0005EED20 /* ZFXAxisLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFXAxisLine.h; sourceTree = "<group>"; };
+		C4E7F581276620F0005EED20 /* ZFLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFLabel.m; sourceTree = "<group>"; };
+		C4E7F582276620F0005EED20 /* ZFYAxisLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFYAxisLine.h; sourceTree = "<group>"; };
+		C4E7F584276620F0005EED20 /* ZFRadar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFRadar.m; sourceTree = "<group>"; };
+		C4E7F585276620F0005EED20 /* ZFPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPolygon.m; sourceTree = "<group>"; };
+		C4E7F586276620F0005EED20 /* ZFRadarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFRadarChart.m; sourceTree = "<group>"; };
+		C4E7F587276620F0005EED20 /* ZFRadar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFRadar.h; sourceTree = "<group>"; };
+		C4E7F588276620F0005EED20 /* ZFPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPolygon.h; sourceTree = "<group>"; };
+		C4E7F589276620F0005EED20 /* ZFRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFRadarChart.h; sourceTree = "<group>"; };
+		C4E7F58B276620F0005EED20 /* ZFGenericAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFGenericAxis.h; sourceTree = "<group>"; };
+		C4E7F58C276620F0005EED20 /* ZFGenericAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFGenericAxis.m; sourceTree = "<group>"; };
+		C4E7F58E276620F0005EED20 /* ZFGradientAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFGradientAttribute.h; sourceTree = "<group>"; };
+		C4E7F58F276620F0005EED20 /* ZFCurveAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFCurveAttribute.h; sourceTree = "<group>"; };
+		C4E7F590276620F0005EED20 /* ZFGradientAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFGradientAttribute.m; sourceTree = "<group>"; };
+		C4E7F591276620F0005EED20 /* ZFCurveAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFCurveAttribute.m; sourceTree = "<group>"; };
+		C4E7F593276620F0005EED20 /* ZFWaveChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFWaveChart.h; sourceTree = "<group>"; };
+		C4E7F594276620F0005EED20 /* ZFWave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFWave.h; sourceTree = "<group>"; };
+		C4E7F595276620F0005EED20 /* ZFWaveChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFWaveChart.m; sourceTree = "<group>"; };
+		C4E7F596276620F0005EED20 /* ZFWave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFWave.m; sourceTree = "<group>"; };
+		C4E7F598276620F0005EED20 /* ZFHorizontalBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFHorizontalBar.h; sourceTree = "<group>"; };
+		C4E7F599276620F0005EED20 /* ZFHorizontalBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFHorizontalBarChart.m; sourceTree = "<group>"; };
+		C4E7F59A276620F0005EED20 /* ZFHorizontalBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFHorizontalBar.m; sourceTree = "<group>"; };
+		C4E7F59B276620F0005EED20 /* ZFHorizontalBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFHorizontalBarChart.h; sourceTree = "<group>"; };
+		C4E7F59D276620F0005EED20 /* HDDLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDLoadingView.h; sourceTree = "<group>"; };
+		C4E7F59E276620F0005EED20 /* HDDLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDLoadingView.m; sourceTree = "<group>"; };
+		C4E7F5A0276620F0005EED20 /* HDDCallCameraTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDCallCameraTool.h; sourceTree = "<group>"; };
+		C4E7F5A1276620F0005EED20 /* HDDCallCameraTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDCallCameraTool.m; sourceTree = "<group>"; };
+		C4E7F5A3276620F0005EED20 /* HDDTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDTimeTool.m; sourceTree = "<group>"; };
+		C4E7F5A4276620F0005EED20 /* HDDDispatchTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDDispatchTimer.m; sourceTree = "<group>"; };
+		C4E7F5A5276620F0005EED20 /* HDDTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDTimeTool.h; sourceTree = "<group>"; };
+		C4E7F5A6276620F0005EED20 /* HDDDispatchTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDDispatchTimer.h; sourceTree = "<group>"; };
+		C4E7F5A8276620F0005EED20 /* CustomKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboard.m; sourceTree = "<group>"; };
+		C4E7F5A9276620F0005EED20 /* CustomKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKeyboard.h; sourceTree = "<group>"; };
+		C4E7F5AB276620F0005EED20 /* RSAUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAUtil.m; sourceTree = "<group>"; };
+		C4E7F5AC276620F0005EED20 /* RSAUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAUtil.h; sourceTree = "<group>"; };
+		C4E7F5AE276620F0005EED20 /* HDDUpdateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDUpdateTool.m; sourceTree = "<group>"; };
+		C4E7F5AF276620F0005EED20 /* HDDUpdateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDUpdateTool.h; sourceTree = "<group>"; };
+		C4E7F5B1276620F0005EED20 /* YBPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPopupMenu.h; sourceTree = "<group>"; };
+		C4E7F5B2276620F0005EED20 /* YBPopupMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPopupMenu.m; sourceTree = "<group>"; };
+		C4E7F5B4276620F0005EED20 /* HDDPaymentTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDPaymentTools.h; sourceTree = "<group>"; };
+		C4E7F5B5276620F0005EED20 /* HDDFreightRulesTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDFreightRulesTool.m; sourceTree = "<group>"; };
+		C4E7F5B6276620F0005EED20 /* HDDPaymentTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDPaymentTools.m; sourceTree = "<group>"; };
+		C4E7F5B7276620F0005EED20 /* HDDFreightRulesTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDFreightRulesTool.h; sourceTree = "<group>"; };
+		C4E7F5B9276620F0005EED20 /* HDDRichTextTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDRichTextTool.m; sourceTree = "<group>"; };
+		C4E7F5BA276620F0005EED20 /* HDDRichTextTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDRichTextTool.h; sourceTree = "<group>"; };
+		C4E7F5BC276620F0005EED20 /* HDDCallPhoneTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDCallPhoneTool.h; sourceTree = "<group>"; };
+		C4E7F5BD276620F0005EED20 /* HDDCallPhoneTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDCallPhoneTool.m; sourceTree = "<group>"; };
+		C4E7F5BF276620F0005EED20 /* XWAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWAlert.h; sourceTree = "<group>"; };
+		C4E7F5C0276620F0005EED20 /* UIAlertController+AddAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+AddAction.h"; sourceTree = "<group>"; };
+		C4E7F5C1276620F0005EED20 /* XWAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWAlert.m; sourceTree = "<group>"; };
+		C4E7F5C2276620F0005EED20 /* UIAlertController+AddAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+AddAction.m"; sourceTree = "<group>"; };
+		C4E7F5C4276620F0005EED20 /* HDDMediaViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDMediaViewer.m; sourceTree = "<group>"; };
+		C4E7F5C5276620F1005EED20 /* HDDMediaViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDMediaViewer.h; sourceTree = "<group>"; };
+		C4E7F60327662119005EED20 /* HDDBaseSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDBaseSubViewController.h; sourceTree = "<group>"; };
+		C4E7F60427662119005EED20 /* HDDBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBaseNavigationController.m; sourceTree = "<group>"; };
+		C4E7F60527662119005EED20 /* HDDBaseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDBaseListViewController.h; sourceTree = "<group>"; };
+		C4E7F60627662119005EED20 /* HDDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDBaseViewController.h; sourceTree = "<group>"; };
+		C4E7F60727662119005EED20 /* HDDBaseSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBaseSubViewController.m; sourceTree = "<group>"; };
+		C4E7F60827662119005EED20 /* HDDBaseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBaseListViewController.m; sourceTree = "<group>"; };
+		C4E7F60927662119005EED20 /* HDDBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDBaseNavigationController.h; sourceTree = "<group>"; };
+		C4E7F60A27662119005EED20 /* HDDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBaseViewController.m; sourceTree = "<group>"; };
+		C4E7F60C27662119005EED20 /* HDDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBaseModel.m; sourceTree = "<group>"; };
+		C4E7F60D27662119005EED20 /* HDDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDBaseModel.h; sourceTree = "<group>"; };
+		C4E7F60F27662119005EED20 /* HDDBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBaseCell.m; sourceTree = "<group>"; };
+		C4E7F61027662119005EED20 /* HDDBaseLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDBaseLabel.h; sourceTree = "<group>"; };
+		C4E7F61127662119005EED20 /* HDDBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBaseView.m; sourceTree = "<group>"; };
+		C4E7F61227662119005EED20 /* HDDBaseTabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDBaseTabelView.h; sourceTree = "<group>"; };
+		C4E7F61327662119005EED20 /* HDDBaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBaseTextField.m; sourceTree = "<group>"; };
+		C4E7F61427662119005EED20 /* HDDBaseLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBaseLabel.m; sourceTree = "<group>"; };
+		C4E7F61527662119005EED20 /* HDDBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDBaseCell.h; sourceTree = "<group>"; };
+		C4E7F61627662119005EED20 /* HDDBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDBaseView.h; sourceTree = "<group>"; };
+		C4E7F61727662119005EED20 /* HDDBaseTabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBaseTabelView.m; sourceTree = "<group>"; };
+		C4E7F61827662119005EED20 /* HDDBaseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDBaseTextField.h; sourceTree = "<group>"; };
+		C4E7F61A27662119005EED20 /* HDDUploadImageAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDUploadImageAlertView.h; sourceTree = "<group>"; };
+		C4E7F61B27662119005EED20 /* HDDSelectedTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDSelectedTimeView.h; sourceTree = "<group>"; };
+		C4E7F61C27662119005EED20 /* HDDHeaderSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDHeaderSearchView.m; sourceTree = "<group>"; };
+		C4E7F61D27662119005EED20 /* HDDBottomPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HDDBottomPickerView.xib; sourceTree = "<group>"; };
+		C4E7F61E27662119005EED20 /* HDDUpdateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDUpdateView.h; sourceTree = "<group>"; };
+		C4E7F61F27662119005EED20 /* HDDBottomPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBottomPickerView.m; sourceTree = "<group>"; };
+		C4E7F62027662119005EED20 /* HDDSelectedBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDSelectedBtn.m; sourceTree = "<group>"; };
+		C4E7F62127662119005EED20 /* HDDUpdateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HDDUpdateView.xib; sourceTree = "<group>"; };
+		C4E7F62227662119005EED20 /* HDDInputPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HDDInputPopView.xib; sourceTree = "<group>"; };
+		C4E7F62327662119005EED20 /* HDDDatePickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDDatePickView.h; sourceTree = "<group>"; };
+		C4E7F62427662119005EED20 /* HDDMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDMenuView.m; sourceTree = "<group>"; };
+		C4E7F62527662119005EED20 /* HDDCustomStructureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDCustomStructureButton.h; sourceTree = "<group>"; };
+		C4E7F62627662119005EED20 /* HDDCustomTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDCustomTextView.m; sourceTree = "<group>"; };
+		C4E7F62727662119005EED20 /* HDDInputPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDInputPopView.h; sourceTree = "<group>"; };
+		C4E7F62827662119005EED20 /* HDDPromptPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDPromptPopView.h; sourceTree = "<group>"; };
+		C4E7F62927662119005EED20 /* HDDMultmediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDMultmediaView.h; sourceTree = "<group>"; };
+		C4E7F62A27662119005EED20 /* HDDBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDBottomView.h; sourceTree = "<group>"; };
+		C4E7F62B27662119005EED20 /* HDDVehicleNumberKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDVehicleNumberKeyBoardView.m; sourceTree = "<group>"; };
+		C4E7F62C27662119005EED20 /* HDDCameraWatermarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDCameraWatermarkView.h; sourceTree = "<group>"; };
+		C4E7F62D27662119005EED20 /* HDDSelectedBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDSelectedBtn.h; sourceTree = "<group>"; };
+		C4E7F62E27662119005EED20 /* HDDBottomPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDBottomPickerView.h; sourceTree = "<group>"; };
+		C4E7F62F27662119005EED20 /* HDDUpdateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDUpdateView.m; sourceTree = "<group>"; };
+		C4E7F63027662119005EED20 /* HDDSelectedTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDSelectedTimeView.m; sourceTree = "<group>"; };
+		C4E7F63127662119005EED20 /* HDDUploadImageAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDUploadImageAlertView.m; sourceTree = "<group>"; };
+		C4E7F63227662119005EED20 /* HDDHeaderSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDHeaderSearchView.h; sourceTree = "<group>"; };
+		C4E7F63327662119005EED20 /* HDDPromptPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HDDPromptPopView.xib; sourceTree = "<group>"; };
+		C4E7F63427662119005EED20 /* HDDDatePickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDDatePickView.m; sourceTree = "<group>"; };
+		C4E7F63527662119005EED20 /* HDDMultmediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDMultmediaView.m; sourceTree = "<group>"; };
+		C4E7F63627662119005EED20 /* HDDPromptPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDPromptPopView.m; sourceTree = "<group>"; };
+		C4E7F63727662119005EED20 /* HDDInputPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDInputPopView.m; sourceTree = "<group>"; };
+		C4E7F63827662119005EED20 /* HDDCustomTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDCustomTextView.h; sourceTree = "<group>"; };
+		C4E7F63927662119005EED20 /* HDDCustomStructureButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDCustomStructureButton.m; sourceTree = "<group>"; };
+		C4E7F63A27662119005EED20 /* HDDMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDMenuView.h; sourceTree = "<group>"; };
+		C4E7F63B27662119005EED20 /* HDDMultmediaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HDDMultmediaView.xib; sourceTree = "<group>"; };
+		C4E7F63C27662119005EED20 /* HDDCameraWatermarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDCameraWatermarkView.m; sourceTree = "<group>"; };
+		C4E7F63D27662119005EED20 /* HDDVehicleNumberKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDVehicleNumberKeyBoardView.h; sourceTree = "<group>"; };
+		C4E7F63E27662119005EED20 /* HDDBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBottomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +514,10 @@
 		563182B2205033180012DA49 /* JFWechatMoments */ = {
 			isa = PBXGroup;
 			children = (
+				C4E7F60127662119005EED20 /* Base */,
+				C4E7F61927662119005EED20 /* Common */,
+				C4E7F52A276620F0005EED20 /* Tools */,
+				C4E7F4ED276620C6005EED20 /* CategorysShip */,
 				C4BF3F2C2746B5800076B98F /* Header */,
 				563182E120503D880012DA49 /* Config */,
 				563182D7205038090012DA49 /* Request */,
@@ -324,6 +655,555 @@
 			path = "Xcode Templates";
 			sourceTree = "<group>";
 		};
+		C4E7F4ED276620C6005EED20 /* CategorysShip */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F4EE276620C6005EED20 /* UIViewController+ImagePicker.m */,
+				C4E7F4EF276620C6005EED20 /* UIViewController+HUD.m */,
+				C4E7F4F0276620C6005EED20 /* MBProgressHUD+Message.h */,
+				C4E7F4F1276620C6005EED20 /* UIDevice+DeviceExtension.h */,
+				C4E7F4F2276620C6005EED20 /* UIButton+DSImageTitleSpacing.m */,
+				C4E7F4F3276620C6005EED20 /* NSString+Extension.h */,
+				C4E7F4F4276620C6005EED20 /* UIColor+Extension.h */,
+				C4E7F4F5276620C6005EED20 /* SDAnimatedImageView+displayLayer.m */,
+				C4E7F4F6276620C6005EED20 /* UIViewController+CurrentVC.h */,
+				C4E7F4F7276620C6005EED20 /* HDDWeakScriptMessageDelegate.h */,
+				C4E7F4F8276620C6005EED20 /* MBProgressHUD+GIF.m */,
+				C4E7F4F9276620C6005EED20 /* UIView+netError.h */,
+				C4E7F4FA276620C6005EED20 /* UIImage+Extension.m */,
+				C4E7F4FB276620C6005EED20 /* UIButton+EventInterval.h */,
+				C4E7F4FC276620C6005EED20 /* UIControl+GcEventHander.h */,
+				C4E7F4FD276620C6005EED20 /* NSDate+TimeStamp.h */,
+				C4E7F4FE276620C6005EED20 /* UIView+sizeAndRound.h */,
+				C4E7F4FF276620C6005EED20 /* UIView+TapGes.h */,
+				C4E7F500276620C6005EED20 /* UITextField+ExtentRange.h */,
+				C4E7F501276620C6005EED20 /* UILabel+fontSize.m */,
+				C4E7F502276620C6005EED20 /* MBProgressHUD+Message.m */,
+				C4E7F503276620C6005EED20 /* UIViewController+HUD.h */,
+				C4E7F504276620C6005EED20 /* UIViewController+ImagePicker.h */,
+				C4E7F505276620C6005EED20 /* MBProgressHUD+GIF.h */,
+				C4E7F506276620C6005EED20 /* HDDWeakScriptMessageDelegate.m */,
+				C4E7F507276620C6005EED20 /* SDAnimatedImageView+displayLayer.h */,
+				C4E7F508276620C6005EED20 /* UIViewController+CurrentVC.m */,
+				C4E7F509276620C6005EED20 /* UIColor+Extension.m */,
+				C4E7F50A276620C6005EED20 /* NSString+Extension.m */,
+				C4E7F50B276620C6005EED20 /* UIButton+DSImageTitleSpacing.h */,
+				C4E7F50C276620C6005EED20 /* UIDevice+DeviceExtension.m */,
+				C4E7F50D276620C6005EED20 /* UIControl+GcEventHander.m */,
+				C4E7F50E276620C6005EED20 /* UIButton+EventInterval.m */,
+				C4E7F50F276620C6005EED20 /* UIImage+Extension.h */,
+				C4E7F510276620C6005EED20 /* UIView+netError.m */,
+				C4E7F511276620C6005EED20 /* UILabel+fontSize.h */,
+				C4E7F512276620C6005EED20 /* UITextField+ExtentRange.m */,
+				C4E7F513276620C6005EED20 /* UIView+TapGes.m */,
+				C4E7F514276620C6005EED20 /* UIView+sizeAndRound.m */,
+				C4E7F515276620C6005EED20 /* NSDate+TimeStamp.m */,
+			);
+			path = CategorysShip;
+			sourceTree = "<group>";
+		};
+		C4E7F52A276620F0005EED20 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F52B276620F0005EED20 /* LocationTool */,
+				C4E7F530276620F0005EED20 /* RegularCheckTool */,
+				C4E7F533276620F0005EED20 /* NumTool */,
+				C4E7F536276620F0005EED20 /* RefreshTool */,
+				C4E7F53B276620F0005EED20 /* EnvironmentTool */,
+				C4E7F53E276620F0005EED20 /* ToastTool */,
+				C4E7F541276620F0005EED20 /* InputTool */,
+				C4E7F544276620F0005EED20 /* NetworkTool */,
+				C4E7F549276620F0005EED20 /* ZFChart */,
+				C4E7F59C276620F0005EED20 /* LoadingViewTool */,
+				C4E7F59F276620F0005EED20 /* CallCameraTool */,
+				C4E7F5A2276620F0005EED20 /* TimeTool */,
+				C4E7F5A7276620F0005EED20 /* KeyBoardTool */,
+				C4E7F5AA276620F0005EED20 /* EncryptionTool */,
+				C4E7F5AD276620F0005EED20 /* UpdateTool */,
+				C4E7F5B0276620F0005EED20 /* YBPopupMenuTool */,
+				C4E7F5B3276620F0005EED20 /* FreightRulesTool */,
+				C4E7F5B8276620F0005EED20 /* RichTextTool */,
+				C4E7F5BB276620F0005EED20 /* CallPhoneTool */,
+				C4E7F5BE276620F0005EED20 /* AlertTool */,
+				C4E7F5C3276620F0005EED20 /* MeidaTool */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C4E7F52B276620F0005EED20 /* LocationTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F52C276620F0005EED20 /* HDDLocationTool.h */,
+				C4E7F52D276620F0005EED20 /* HDDCoordinateTransformation.m */,
+				C4E7F52E276620F0005EED20 /* HDDLocationTool.m */,
+				C4E7F52F276620F0005EED20 /* HDDCoordinateTransformation.h */,
+			);
+			path = LocationTool;
+			sourceTree = "<group>";
+		};
+		C4E7F530276620F0005EED20 /* RegularCheckTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F531276620F0005EED20 /* HDDRegularCheckTool.m */,
+				C4E7F532276620F0005EED20 /* HDDRegularCheckTool.h */,
+			);
+			path = RegularCheckTool;
+			sourceTree = "<group>";
+		};
+		C4E7F533276620F0005EED20 /* NumTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F534276620F0005EED20 /* HDDNumberTool.m */,
+				C4E7F535276620F0005EED20 /* HDDNumberTool.h */,
+			);
+			path = NumTool;
+			sourceTree = "<group>";
+		};
+		C4E7F536276620F0005EED20 /* RefreshTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F537276620F0005EED20 /* HDDRefreshFooter.m */,
+				C4E7F538276620F0005EED20 /* HDDRefreshHeader.m */,
+				C4E7F539276620F0005EED20 /* HDDRefreshHeader.h */,
+				C4E7F53A276620F0005EED20 /* HDDRefreshFooter.h */,
+			);
+			path = RefreshTool;
+			sourceTree = "<group>";
+		};
+		C4E7F53B276620F0005EED20 /* EnvironmentTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F53C276620F0005EED20 /* EnvironmentTool.m */,
+				C4E7F53D276620F0005EED20 /* EnvironmentTool.h */,
+			);
+			path = EnvironmentTool;
+			sourceTree = "<group>";
+		};
+		C4E7F53E276620F0005EED20 /* ToastTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F53F276620F0005EED20 /* HDDCustomToastView.m */,
+				C4E7F540276620F0005EED20 /* HDDCustomToastView.h */,
+			);
+			path = ToastTool;
+			sourceTree = "<group>";
+		};
+		C4E7F541276620F0005EED20 /* InputTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F542276620F0005EED20 /* HDDInputCheckTool.m */,
+				C4E7F543276620F0005EED20 /* HDDInputCheckTool.h */,
+			);
+			path = InputTool;
+			sourceTree = "<group>";
+		};
+		C4E7F544276620F0005EED20 /* NetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F545276620F0005EED20 /* HDDUploadFileClass.m */,
+				C4E7F546276620F0005EED20 /* AFNetworkRequestTool.m */,
+				C4E7F547276620F0005EED20 /* HDDUploadFileClass.h */,
+				C4E7F548276620F0005EED20 /* AFNetworkRequestTool.h */,
+			);
+			path = NetworkTool;
+			sourceTree = "<group>";
+		};
+		C4E7F549276620F0005EED20 /* ZFChart */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F54A276620F0005EED20 /* ZFGenericChart */,
+				C4E7F54D276620F0005EED20 /* ZFBarChart */,
+				C4E7F552276620F0005EED20 /* Category */,
+				C4E7F55D276620F0005EED20 /* ZFCirqueChart */,
+				C4E7F562276620F0005EED20 /* ZFHorizontalAxis */,
+				C4E7F565276620F0005EED20 /* Other */,
+				C4E7F56C276620F0005EED20 /* ZFPieChart */,
+				C4E7F573276620F0005EED20 /* ZFLineChart */,
+				C4E7F57A276620F0005EED20 /* Component */,
+				C4E7F583276620F0005EED20 /* ZFRadarChart */,
+				C4E7F58A276620F0005EED20 /* ZFGenericAxis */,
+				C4E7F58D276620F0005EED20 /* Model */,
+				C4E7F592276620F0005EED20 /* ZFWaveChart */,
+				C4E7F597276620F0005EED20 /* ZFHorizontalBarChart */,
+			);
+			path = ZFChart;
+			sourceTree = "<group>";
+		};
+		C4E7F54A276620F0005EED20 /* ZFGenericChart */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F54B276620F0005EED20 /* ZFGenericChart.h */,
+				C4E7F54C276620F0005EED20 /* ZFGenericChart.m */,
+			);
+			path = ZFGenericChart;
+			sourceTree = "<group>";
+		};
+		C4E7F54D276620F0005EED20 /* ZFBarChart */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F54E276620F0005EED20 /* ZFBarChart.h */,
+				C4E7F54F276620F0005EED20 /* ZFBar.h */,
+				C4E7F550276620F0005EED20 /* ZFBarChart.m */,
+				C4E7F551276620F0005EED20 /* ZFBar.m */,
+			);
+			path = ZFBarChart;
+			sourceTree = "<group>";
+		};
+		C4E7F552276620F0005EED20 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F553276620F0005EED20 /* UIView+Zirkfied.m */,
+				C4E7F554276620F0005EED20 /* UIColor+Zirkfied.h */,
+				C4E7F555276620F0005EED20 /* UIBezierPath+Zirkfied.m */,
+				C4E7F556276620F0005EED20 /* NSString+Zirkfied.h */,
+				C4E7F557276620F0005EED20 /* NSNumber+Zirkfied.h */,
+				C4E7F558276620F0005EED20 /* UIView+Zirkfied.h */,
+				C4E7F559276620F0005EED20 /* UIColor+Zirkfied.m */,
+				C4E7F55A276620F0005EED20 /* UIBezierPath+Zirkfied.h */,
+				C4E7F55B276620F0005EED20 /* NSString+Zirkfied.m */,
+				C4E7F55C276620F0005EED20 /* NSNumber+Zirkfied.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C4E7F55D276620F0005EED20 /* ZFCirqueChart */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F55E276620F0005EED20 /* ZFCirque.h */,
+				C4E7F55F276620F0005EED20 /* ZFCirqueChart.m */,
+				C4E7F560276620F0005EED20 /* ZFCirqueChart.h */,
+				C4E7F561276620F0005EED20 /* ZFCirque.m */,
+			);
+			path = ZFCirqueChart;
+			sourceTree = "<group>";
+		};
+		C4E7F562276620F0005EED20 /* ZFHorizontalAxis */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F563276620F0005EED20 /* ZFHorizontalAxis.m */,
+				C4E7F564276620F0005EED20 /* ZFHorizontalAxis.h */,
+			);
+			path = ZFHorizontalAxis;
+			sourceTree = "<group>";
+		};
+		C4E7F565276620F0005EED20 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F566276620F0005EED20 /* ZFColor.h */,
+				C4E7F567276620F0005EED20 /* ZFConst.m */,
+				C4E7F568276620F0005EED20 /* ZFChart.h */,
+				C4E7F569276620F0005EED20 /* ZFMethod.h */,
+				C4E7F56A276620F0005EED20 /* ZFConst.h */,
+				C4E7F56B276620F0005EED20 /* ZFMethod.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		C4E7F56C276620F0005EED20 /* ZFPieChart */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F56D276620F0005EED20 /* ZFPieChart.m */,
+				C4E7F56E276620F0005EED20 /* ZFPie.h */,
+				C4E7F56F276620F0005EED20 /* ZFTranslucencePath.h */,
+				C4E7F570276620F0005EED20 /* ZFPieChart.h */,
+				C4E7F571276620F0005EED20 /* ZFPie.m */,
+				C4E7F572276620F0005EED20 /* ZFTranslucencePath.m */,
+			);
+			path = ZFPieChart;
+			sourceTree = "<group>";
+		};
+		C4E7F573276620F0005EED20 /* ZFLineChart */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F574276620F0005EED20 /* ZFCircle.h */,
+				C4E7F575276620F0005EED20 /* ZFLineChart.m */,
+				C4E7F576276620F0005EED20 /* ZFLine.h */,
+				C4E7F577276620F0005EED20 /* ZFLineChart.h */,
+				C4E7F578276620F0005EED20 /* ZFCircle.m */,
+				C4E7F579276620F0005EED20 /* ZFLine.m */,
+			);
+			path = ZFLineChart;
+			sourceTree = "<group>";
+		};
+		C4E7F57A276620F0005EED20 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F57B276620F0005EED20 /* ZFPopoverLabel.h */,
+				C4E7F57C276620F0005EED20 /* ZFXAxisLine.m */,
+				C4E7F57D276620F0005EED20 /* ZFYAxisLine.m */,
+				C4E7F57E276620F0005EED20 /* ZFLabel.h */,
+				C4E7F57F276620F0005EED20 /* ZFPopoverLabel.m */,
+				C4E7F580276620F0005EED20 /* ZFXAxisLine.h */,
+				C4E7F581276620F0005EED20 /* ZFLabel.m */,
+				C4E7F582276620F0005EED20 /* ZFYAxisLine.h */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		C4E7F583276620F0005EED20 /* ZFRadarChart */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F584276620F0005EED20 /* ZFRadar.m */,
+				C4E7F585276620F0005EED20 /* ZFPolygon.m */,
+				C4E7F586276620F0005EED20 /* ZFRadarChart.m */,
+				C4E7F587276620F0005EED20 /* ZFRadar.h */,
+				C4E7F588276620F0005EED20 /* ZFPolygon.h */,
+				C4E7F589276620F0005EED20 /* ZFRadarChart.h */,
+			);
+			path = ZFRadarChart;
+			sourceTree = "<group>";
+		};
+		C4E7F58A276620F0005EED20 /* ZFGenericAxis */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F58B276620F0005EED20 /* ZFGenericAxis.h */,
+				C4E7F58C276620F0005EED20 /* ZFGenericAxis.m */,
+			);
+			path = ZFGenericAxis;
+			sourceTree = "<group>";
+		};
+		C4E7F58D276620F0005EED20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F58E276620F0005EED20 /* ZFGradientAttribute.h */,
+				C4E7F58F276620F0005EED20 /* ZFCurveAttribute.h */,
+				C4E7F590276620F0005EED20 /* ZFGradientAttribute.m */,
+				C4E7F591276620F0005EED20 /* ZFCurveAttribute.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4E7F592276620F0005EED20 /* ZFWaveChart */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F593276620F0005EED20 /* ZFWaveChart.h */,
+				C4E7F594276620F0005EED20 /* ZFWave.h */,
+				C4E7F595276620F0005EED20 /* ZFWaveChart.m */,
+				C4E7F596276620F0005EED20 /* ZFWave.m */,
+			);
+			path = ZFWaveChart;
+			sourceTree = "<group>";
+		};
+		C4E7F597276620F0005EED20 /* ZFHorizontalBarChart */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F598276620F0005EED20 /* ZFHorizontalBar.h */,
+				C4E7F599276620F0005EED20 /* ZFHorizontalBarChart.m */,
+				C4E7F59A276620F0005EED20 /* ZFHorizontalBar.m */,
+				C4E7F59B276620F0005EED20 /* ZFHorizontalBarChart.h */,
+			);
+			path = ZFHorizontalBarChart;
+			sourceTree = "<group>";
+		};
+		C4E7F59C276620F0005EED20 /* LoadingViewTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F59D276620F0005EED20 /* HDDLoadingView.h */,
+				C4E7F59E276620F0005EED20 /* HDDLoadingView.m */,
+			);
+			path = LoadingViewTool;
+			sourceTree = "<group>";
+		};
+		C4E7F59F276620F0005EED20 /* CallCameraTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F5A0276620F0005EED20 /* HDDCallCameraTool.h */,
+				C4E7F5A1276620F0005EED20 /* HDDCallCameraTool.m */,
+			);
+			path = CallCameraTool;
+			sourceTree = "<group>";
+		};
+		C4E7F5A2276620F0005EED20 /* TimeTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F5A3276620F0005EED20 /* HDDTimeTool.m */,
+				C4E7F5A4276620F0005EED20 /* HDDDispatchTimer.m */,
+				C4E7F5A5276620F0005EED20 /* HDDTimeTool.h */,
+				C4E7F5A6276620F0005EED20 /* HDDDispatchTimer.h */,
+			);
+			path = TimeTool;
+			sourceTree = "<group>";
+		};
+		C4E7F5A7276620F0005EED20 /* KeyBoardTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F5A8276620F0005EED20 /* CustomKeyboard.m */,
+				C4E7F5A9276620F0005EED20 /* CustomKeyboard.h */,
+			);
+			path = KeyBoardTool;
+			sourceTree = "<group>";
+		};
+		C4E7F5AA276620F0005EED20 /* EncryptionTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F5AB276620F0005EED20 /* RSAUtil.m */,
+				C4E7F5AC276620F0005EED20 /* RSAUtil.h */,
+			);
+			path = EncryptionTool;
+			sourceTree = "<group>";
+		};
+		C4E7F5AD276620F0005EED20 /* UpdateTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F5AE276620F0005EED20 /* HDDUpdateTool.m */,
+				C4E7F5AF276620F0005EED20 /* HDDUpdateTool.h */,
+			);
+			path = UpdateTool;
+			sourceTree = "<group>";
+		};
+		C4E7F5B0276620F0005EED20 /* YBPopupMenuTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F5B1276620F0005EED20 /* YBPopupMenu.h */,
+				C4E7F5B2276620F0005EED20 /* YBPopupMenu.m */,
+			);
+			path = YBPopupMenuTool;
+			sourceTree = "<group>";
+		};
+		C4E7F5B3276620F0005EED20 /* FreightRulesTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F5B4276620F0005EED20 /* HDDPaymentTools.h */,
+				C4E7F5B5276620F0005EED20 /* HDDFreightRulesTool.m */,
+				C4E7F5B6276620F0005EED20 /* HDDPaymentTools.m */,
+				C4E7F5B7276620F0005EED20 /* HDDFreightRulesTool.h */,
+			);
+			path = FreightRulesTool;
+			sourceTree = "<group>";
+		};
+		C4E7F5B8276620F0005EED20 /* RichTextTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F5B9276620F0005EED20 /* HDDRichTextTool.m */,
+				C4E7F5BA276620F0005EED20 /* HDDRichTextTool.h */,
+			);
+			path = RichTextTool;
+			sourceTree = "<group>";
+		};
+		C4E7F5BB276620F0005EED20 /* CallPhoneTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F5BC276620F0005EED20 /* HDDCallPhoneTool.h */,
+				C4E7F5BD276620F0005EED20 /* HDDCallPhoneTool.m */,
+			);
+			path = CallPhoneTool;
+			sourceTree = "<group>";
+		};
+		C4E7F5BE276620F0005EED20 /* AlertTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F5BF276620F0005EED20 /* XWAlert.h */,
+				C4E7F5C0276620F0005EED20 /* UIAlertController+AddAction.h */,
+				C4E7F5C1276620F0005EED20 /* XWAlert.m */,
+				C4E7F5C2276620F0005EED20 /* UIAlertController+AddAction.m */,
+			);
+			path = AlertTool;
+			sourceTree = "<group>";
+		};
+		C4E7F5C3276620F0005EED20 /* MeidaTool */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F5C4276620F0005EED20 /* HDDMediaViewer.m */,
+				C4E7F5C5276620F1005EED20 /* HDDMediaViewer.h */,
+			);
+			path = MeidaTool;
+			sourceTree = "<group>";
+		};
+		C4E7F60127662119005EED20 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F60227662119005EED20 /* Controller */,
+				C4E7F60B27662119005EED20 /* Model */,
+				C4E7F60E27662119005EED20 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C4E7F60227662119005EED20 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F60327662119005EED20 /* HDDBaseSubViewController.h */,
+				C4E7F60427662119005EED20 /* HDDBaseNavigationController.m */,
+				C4E7F60527662119005EED20 /* HDDBaseListViewController.h */,
+				C4E7F60627662119005EED20 /* HDDBaseViewController.h */,
+				C4E7F60727662119005EED20 /* HDDBaseSubViewController.m */,
+				C4E7F60827662119005EED20 /* HDDBaseListViewController.m */,
+				C4E7F60927662119005EED20 /* HDDBaseNavigationController.h */,
+				C4E7F60A27662119005EED20 /* HDDBaseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4E7F60B27662119005EED20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F60C27662119005EED20 /* HDDBaseModel.m */,
+				C4E7F60D27662119005EED20 /* HDDBaseModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4E7F60E27662119005EED20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F60F27662119005EED20 /* HDDBaseCell.m */,
+				C4E7F61027662119005EED20 /* HDDBaseLabel.h */,
+				C4E7F61127662119005EED20 /* HDDBaseView.m */,
+				C4E7F61227662119005EED20 /* HDDBaseTabelView.h */,
+				C4E7F61327662119005EED20 /* HDDBaseTextField.m */,
+				C4E7F61427662119005EED20 /* HDDBaseLabel.m */,
+				C4E7F61527662119005EED20 /* HDDBaseCell.h */,
+				C4E7F61627662119005EED20 /* HDDBaseView.h */,
+				C4E7F61727662119005EED20 /* HDDBaseTabelView.m */,
+				C4E7F61827662119005EED20 /* HDDBaseTextField.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4E7F61927662119005EED20 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F61A27662119005EED20 /* HDDUploadImageAlertView.h */,
+				C4E7F61B27662119005EED20 /* HDDSelectedTimeView.h */,
+				C4E7F61C27662119005EED20 /* HDDHeaderSearchView.m */,
+				C4E7F61D27662119005EED20 /* HDDBottomPickerView.xib */,
+				C4E7F61E27662119005EED20 /* HDDUpdateView.h */,
+				C4E7F61F27662119005EED20 /* HDDBottomPickerView.m */,
+				C4E7F62027662119005EED20 /* HDDSelectedBtn.m */,
+				C4E7F62127662119005EED20 /* HDDUpdateView.xib */,
+				C4E7F62227662119005EED20 /* HDDInputPopView.xib */,
+				C4E7F62327662119005EED20 /* HDDDatePickView.h */,
+				C4E7F62427662119005EED20 /* HDDMenuView.m */,
+				C4E7F62527662119005EED20 /* HDDCustomStructureButton.h */,
+				C4E7F62627662119005EED20 /* HDDCustomTextView.m */,
+				C4E7F62727662119005EED20 /* HDDInputPopView.h */,
+				C4E7F62827662119005EED20 /* HDDPromptPopView.h */,
+				C4E7F62927662119005EED20 /* HDDMultmediaView.h */,
+				C4E7F62A27662119005EED20 /* HDDBottomView.h */,
+				C4E7F62B27662119005EED20 /* HDDVehicleNumberKeyBoardView.m */,
+				C4E7F62C27662119005EED20 /* HDDCameraWatermarkView.h */,
+				C4E7F62D27662119005EED20 /* HDDSelectedBtn.h */,
+				C4E7F62E27662119005EED20 /* HDDBottomPickerView.h */,
+				C4E7F62F27662119005EED20 /* HDDUpdateView.m */,
+				C4E7F63027662119005EED20 /* HDDSelectedTimeView.m */,
+				C4E7F63127662119005EED20 /* HDDUploadImageAlertView.m */,
+				C4E7F63227662119005EED20 /* HDDHeaderSearchView.h */,
+				C4E7F63327662119005EED20 /* HDDPromptPopView.xib */,
+				C4E7F63427662119005EED20 /* HDDDatePickView.m */,
+				C4E7F63527662119005EED20 /* HDDMultmediaView.m */,
+				C4E7F63627662119005EED20 /* HDDPromptPopView.m */,
+				C4E7F63727662119005EED20 /* HDDInputPopView.m */,
+				C4E7F63827662119005EED20 /* HDDCustomTextView.h */,
+				C4E7F63927662119005EED20 /* HDDCustomStructureButton.m */,
+				C4E7F63A27662119005EED20 /* HDDMenuView.h */,
+				C4E7F63B27662119005EED20 /* HDDMultmediaView.xib */,
+				C4E7F63C27662119005EED20 /* HDDCameraWatermarkView.m */,
+				C4E7F63D27662119005EED20 /* HDDVehicleNumberKeyBoardView.h */,
+				C4E7F63E27662119005EED20 /* HDDBottomView.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -410,7 +1290,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				563182C0205033180012DA49 /* LaunchScreen.storyboard in Resources */,
+				C4E7F6552766211A005EED20 /* HDDPromptPopView.xib in Resources */,
+				C4E7F65B2766211A005EED20 /* HDDMultmediaView.xib in Resources */,
+				C4E7F64D2766211A005EED20 /* HDDUpdateView.xib in Resources */,
 				563182BD205033180012DA49 /* Assets.xcassets in Resources */,
+				C4E7F64A2766211A005EED20 /* HDDBottomPickerView.xib in Resources */,
+				C4E7F64E2766211A005EED20 /* HDDInputPopView.xib in Resources */,
 				563182BB205033180012DA49 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,26 +1373,131 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4E7F5EA276620F1005EED20 /* ZFRadarChart.m in Sources */,
 				564B91F42054F04100AC85C9 /* NSString+MD5.m in Sources */,
+				C4E7F6572766211A005EED20 /* HDDMultmediaView.m in Sources */,
 				C48CDF1D274BB14700A4D74D /* JFDownloadManager.m in Sources */,
+				C4E7F6402766211A005EED20 /* HDDBaseSubViewController.m in Sources */,
+				C4E7F5E1276620F1005EED20 /* ZFLineChart.m in Sources */,
+				C4E7F6462766211A005EED20 /* HDDBaseTextField.m in Sources */,
+				C4E7F51C276620C7005EED20 /* UILabel+fontSize.m in Sources */,
+				C4E7F5FB276620F1005EED20 /* HDDPaymentTools.m in Sources */,
+				C4E7F5EC276620F1005EED20 /* ZFGradientAttribute.m in Sources */,
+				C4E7F5D3276620F1005EED20 /* ZFBar.m in Sources */,
+				C4E7F5FC276620F1005EED20 /* HDDRichTextTool.m in Sources */,
 				011FF4E62050D3B9002C1EE6 /* MomentsCommentView.m in Sources */,
+				C4E7F6512766211A005EED20 /* HDDVehicleNumberKeyBoardView.m in Sources */,
+				C4E7F6422766211A005EED20 /* HDDBaseViewController.m in Sources */,
+				C4E7F5D8276620F1005EED20 /* NSNumber+Zirkfied.m in Sources */,
+				C4E7F5EB276620F1005EED20 /* ZFGenericAxis.m in Sources */,
+				C4E7F526276620C7005EED20 /* UITextField+ExtentRange.m in Sources */,
 				563182E420503DBC0012DA49 /* Config.m in Sources */,
+				C4E7F5EF276620F1005EED20 /* ZFWave.m in Sources */,
+				C4E7F525276620C7005EED20 /* UIView+netError.m in Sources */,
+				C4E7F51F276620C7005EED20 /* UIViewController+CurrentVC.m in Sources */,
+				C4E7F5FD276620F1005EED20 /* HDDCallPhoneTool.m in Sources */,
+				C4E7F6452766211A005EED20 /* HDDBaseView.m in Sources */,
+				C4E7F5F1276620F1005EED20 /* ZFHorizontalBar.m in Sources */,
 				563182F0205051040012DA49 /* User.m in Sources */,
+				C4E7F5E8276620F1005EED20 /* ZFRadar.m in Sources */,
+				C4E7F5C9276620F1005EED20 /* HDDNumberTool.m in Sources */,
+				C4E7F5DF276620F1005EED20 /* ZFPie.m in Sources */,
 				C48CDF23274BBA4700A4D74D /* WebImageManage.m in Sources */,
+				C4E7F5D2276620F1005EED20 /* ZFBarChart.m in Sources */,
+				C4E7F527276620C7005EED20 /* UIView+TapGes.m in Sources */,
+				C4E7F529276620C7005EED20 /* NSDate+TimeStamp.m in Sources */,
+				C4E7F5ED276620F1005EED20 /* ZFCurveAttribute.m in Sources */,
+				C4E7F517276620C7005EED20 /* UIViewController+HUD.m in Sources */,
+				C4E7F522276620C7005EED20 /* UIDevice+DeviceExtension.m in Sources */,
+				C4E7F5D5276620F1005EED20 /* UIBezierPath+Zirkfied.m in Sources */,
 				563182F32050535B0012DA49 /* Comment.m in Sources */,
+				C4E7F5F3276620F1005EED20 /* HDDCallCameraTool.m in Sources */,
+				C4E7F5EE276620F1005EED20 /* ZFWaveChart.m in Sources */,
+				C4E7F5D7276620F1005EED20 /* NSString+Zirkfied.m in Sources */,
+				C4E7F5FE276620F1005EED20 /* XWAlert.m in Sources */,
+				C4E7F5CE276620F1005EED20 /* HDDInputCheckTool.m in Sources */,
+				C4E7F5CD276620F1005EED20 /* HDDCustomToastView.m in Sources */,
 				564B91F72054F11E00AC85C9 /* UIImageView+Web.m in Sources */,
+				C4E7F6562766211A005EED20 /* HDDDatePickView.m in Sources */,
+				C4E7F64F2766211A005EED20 /* HDDMenuView.m in Sources */,
+				C4E7F524276620C7005EED20 /* UIButton+EventInterval.m in Sources */,
+				C4E7F5D9276620F1005EED20 /* ZFCirqueChart.m in Sources */,
+				C4E7F5CC276620F1005EED20 /* EnvironmentTool.m in Sources */,
+				C4E7F51E276620C7005EED20 /* HDDWeakScriptMessageDelegate.m in Sources */,
+				C4E7F5E5276620F1005EED20 /* ZFYAxisLine.m in Sources */,
+				C4E7F5DB276620F1005EED20 /* ZFHorizontalAxis.m in Sources */,
+				C4E7F5D1276620F1005EED20 /* ZFGenericChart.m in Sources */,
+				C4E7F6582766211A005EED20 /* HDDPromptPopView.m in Sources */,
+				C4E7F6442766211A005EED20 /* HDDBaseCell.m in Sources */,
 				563182F6205053D60012DA49 /* Tweet.m in Sources */,
+				C4E7F5F2276620F1005EED20 /* HDDLoadingView.m in Sources */,
+				C4E7F5C8276620F1005EED20 /* HDDRegularCheckTool.m in Sources */,
+				C4E7F6482766211A005EED20 /* HDDBaseTabelView.m in Sources */,
+				C4E7F5DA276620F1005EED20 /* ZFCirque.m in Sources */,
+				C4E7F5CF276620F1005EED20 /* HDDUploadFileClass.m in Sources */,
+				C4E7F5E9276620F1005EED20 /* ZFPolygon.m in Sources */,
+				C4E7F5F6276620F1005EED20 /* CustomKeyboard.m in Sources */,
+				C4E7F5E0276620F1005EED20 /* ZFTranslucencePath.m in Sources */,
+				C4E7F5CB276620F1005EED20 /* HDDRefreshHeader.m in Sources */,
 				C48351EB274DE720001858FC /* JFPhotoBrowser.m in Sources */,
+				C4E7F5D4276620F1005EED20 /* UIView+Zirkfied.m in Sources */,
+				C4E7F6592766211A005EED20 /* HDDInputPopView.m in Sources */,
+				C4E7F65C2766211A005EED20 /* HDDCameraWatermarkView.m in Sources */,
 				564B91F12054EFF200AC85C9 /* UIImage+Color.m in Sources */,
+				C4E7F6532766211A005EED20 /* HDDSelectedTimeView.m in Sources */,
+				C4E7F5DD276620F1005EED20 /* ZFMethod.m in Sources */,
+				C4E7F521276620C7005EED20 /* NSString+Extension.m in Sources */,
+				C4E7F5E4276620F1005EED20 /* ZFXAxisLine.m in Sources */,
+				C4E7F5F4276620F1005EED20 /* HDDTimeTool.m in Sources */,
+				C4E7F6492766211A005EED20 /* HDDHeaderSearchView.m in Sources */,
+				C4E7F600276620F1005EED20 /* HDDMediaViewer.m in Sources */,
+				C4E7F6472766211A005EED20 /* HDDBaseLabel.m in Sources */,
+				C4E7F528276620C7005EED20 /* UIView+sizeAndRound.m in Sources */,
+				C4E7F51A276620C7005EED20 /* MBProgressHUD+GIF.m in Sources */,
 				563182C3205033180012DA49 /* main.m in Sources */,
+				C4E7F5C6276620F1005EED20 /* HDDCoordinateTransformation.m in Sources */,
+				C4E7F6432766211A005EED20 /* HDDBaseModel.m in Sources */,
+				C4E7F5DE276620F1005EED20 /* ZFPieChart.m in Sources */,
+				C4E7F5E6276620F1005EED20 /* ZFPopoverLabel.m in Sources */,
+				C4E7F65A2766211A005EED20 /* HDDCustomStructureButton.m in Sources */,
+				C4E7F5F9276620F1005EED20 /* YBPopupMenu.m in Sources */,
+				C4E7F51D276620C7005EED20 /* MBProgressHUD+Message.m in Sources */,
+				C4E7F5E2276620F1005EED20 /* ZFCircle.m in Sources */,
+				C4E7F65D2766211A005EED20 /* HDDBottomView.m in Sources */,
 				563182B5205033180012DA49 /* AppDelegate.m in Sources */,
+				C4E7F518276620C7005EED20 /* UIButton+DSImageTitleSpacing.m in Sources */,
 				C48351EE274DED8C001858FC /* PhotoImageView.m in Sources */,
+				C4E7F63F2766211A005EED20 /* HDDBaseNavigationController.m in Sources */,
+				C4E7F64B2766211A005EED20 /* HDDBottomPickerView.m in Sources */,
 				C4E7F4E927661956005EED20 /* UIViewController+CurrentVC.m in Sources */,
+				C4E7F5DC276620F1005EED20 /* ZFConst.m in Sources */,
+				C4E7F64C2766211A005EED20 /* HDDSelectedBtn.m in Sources */,
+				C4E7F5F5276620F1005EED20 /* HDDDispatchTimer.m in Sources */,
+				C4E7F520276620C7005EED20 /* UIColor+Extension.m in Sources */,
+				C4E7F5FF276620F1005EED20 /* UIAlertController+AddAction.m in Sources */,
+				C4E7F6502766211A005EED20 /* HDDCustomTextView.m in Sources */,
+				C4E7F5D0276620F1005EED20 /* AFNetworkRequestTool.m in Sources */,
 				563182E02050396B0012DA49 /* NetRequest.m in Sources */,
 				011FF4E32050D14C002C1EE6 /* MomentsPhotoView.m in Sources */,
+				C4E7F5E3276620F1005EED20 /* ZFLine.m in Sources */,
 				011FF4E02050CB20002C1EE6 /* MomentsTableViewCell.m in Sources */,
+				C4E7F6522766211A005EED20 /* HDDUpdateView.m in Sources */,
+				C4E7F51B276620C7005EED20 /* UIImage+Extension.m in Sources */,
+				C4E7F516276620C7005EED20 /* UIViewController+ImagePicker.m in Sources */,
+				C4E7F5F8276620F1005EED20 /* HDDUpdateTool.m in Sources */,
+				C4E7F5FA276620F1005EED20 /* HDDFreightRulesTool.m in Sources */,
+				C4E7F5F7276620F1005EED20 /* RSAUtil.m in Sources */,
+				C4E7F5F0276620F1005EED20 /* ZFHorizontalBarChart.m in Sources */,
 				C4E7F4EC2766199B005EED20 /* FloatEffectView.m in Sources */,
+				C4E7F5D6276620F1005EED20 /* UIColor+Zirkfied.m in Sources */,
 				564B91FD20556E7B00AC85C9 /* MomentsTableViewController.m in Sources */,
+				C4E7F6412766211A005EED20 /* HDDBaseListViewController.m in Sources */,
+				C4E7F5CA276620F1005EED20 /* HDDRefreshFooter.m in Sources */,
+				C4E7F5E7276620F1005EED20 /* ZFLabel.m in Sources */,
+				C4E7F5C7276620F1005EED20 /* HDDLocationTool.m in Sources */,
+				C4E7F523276620C7005EED20 /* UIControl+GcEventHander.m in Sources */,
+				C4E7F519276620C7005EED20 /* SDAnimatedImageView+displayLayer.m in Sources */,
+				C4E7F6542766211A005EED20 /* HDDUploadImageAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
