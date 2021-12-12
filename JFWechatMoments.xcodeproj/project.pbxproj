@@ -146,6 +146,7 @@
 		C4E7F65B2766211A005EED20 /* HDDMultmediaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E7F63B27662119005EED20 /* HDDMultmediaView.xib */; };
 		C4E7F65C2766211A005EED20 /* HDDCameraWatermarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F63C27662119005EED20 /* HDDCameraWatermarkView.m */; };
 		C4E7F65D2766211A005EED20 /* HDDBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F63E27662119005EED20 /* HDDBottomView.m */; };
+		C4E7F66027662262005EED20 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7F65F27662262005EED20 /* DetailViewController.m */; };
 		C50AFA72181324C2D70B133D /* libPods-JFWechatMomentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A65DFE617555CFE906F6CF22 /* libPods-JFWechatMomentsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -436,6 +437,8 @@
 		C4E7F63C27662119005EED20 /* HDDCameraWatermarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDCameraWatermarkView.m; sourceTree = "<group>"; };
 		C4E7F63D27662119005EED20 /* HDDVehicleNumberKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDVehicleNumberKeyBoardView.h; sourceTree = "<group>"; };
 		C4E7F63E27662119005EED20 /* HDDBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDBottomView.m; sourceTree = "<group>"; };
+		C4E7F65E27662262005EED20 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		C4E7F65F27662262005EED20 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -561,6 +564,8 @@
 		563182D9205038170012DA49 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C4E7F65E27662262005EED20 /* DetailViewController.h */,
+				C4E7F65F27662262005EED20 /* DetailViewController.m */,
 				564B91FB20556E7B00AC85C9 /* MomentsTableViewController.h */,
 				564B91FC20556E7B00AC85C9 /* MomentsTableViewController.m */,
 			);
@@ -1456,6 +1461,7 @@
 				C4E7F51A276620C7005EED20 /* MBProgressHUD+GIF.m in Sources */,
 				563182C3205033180012DA49 /* main.m in Sources */,
 				C4E7F5C6276620F1005EED20 /* HDDCoordinateTransformation.m in Sources */,
+				C4E7F66027662262005EED20 /* DetailViewController.m in Sources */,
 				C4E7F6432766211A005EED20 /* HDDBaseModel.m in Sources */,
 				C4E7F5DE276620F1005EED20 /* ZFPieChart.m in Sources */,
 				C4E7F5E6276620F1005EED20 /* ZFPopoverLabel.m in Sources */,
