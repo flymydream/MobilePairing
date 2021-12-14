@@ -461,4 +461,43 @@
     NSLog(@"移除动画");
     [self.view removeFromSuperview];
 }
+
+-(void)loadGif {
+    //1.初始化YYAnimatedImageView
+//    YYAnimatedImageView *imageView = [[YYAnimatedImageView alloc] init];
+//    imageView.backgroundColor = [UIColor whiteColor];
+//    imageView.contentMode = UIViewContentModeScaleAspectFit;
+//    [self.view addSubview:imageView];
+//
+//    //2.加载网络GIF图片
+//    [imageView yy_setImageWithURL:[NSURL URLWithString:@"gif图url链接"] placeholder:[UIImage imageNamed:@"default"]];
+
+    //3.通过RAC或者自己写观察者，观察currentAnimatedImageIndex播放到什么位置，如果播放到最后一张图，则停止播放
+    //[RACObserve(imageView, currentAnimatedImageIndex) subscribeNext:^(id _Nullable x) {
+    //if ([x integerValue] == imageView.animationImages.count) {
+    //[_imageView stopAnimating];
+    //}
+    //}];
+
+//    #本地gif
+//    YYImage *yyimage = [YYImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.imageFilePath]]];
+//    self.contentImageView.image = yyimage;
+//
+//    #网络gif
+//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@%@",[JSPPAccountManager sharedManager].raddrURL,item.content.image.URL]];
+//        [self.contentImageView yy_setImageWithURL:url placeholder:kImageNamed(@"")];
+    
+    //1. 加载本地的gif图片
+//         FLAnimatedImageView *imgView = (FLAnimatedImageView*)[cell.contentView viewWithTag:1];
+//         imgView.contentMode = UIViewContentModeScaleAspectFit;
+//
+//         NSString * bundlePath = [[ NSBundle mainBundle] pathForResource: @ "gifBundle" ofType :@ "bundle"];
+//         NSString *imgPath= [bundlePath stringByAppendingPathComponent :[NSString stringWithFormat:@"/%ld.gif", indexPath.row+1]];
+//
+//         NSData  *imageData = [NSData dataWithContentsOfFile:imgPath];
+//
+//         imgView.animatedImage = [FLAnimatedImage animatedImageWithGIFData:imageData];
+
+}
+
 @end
