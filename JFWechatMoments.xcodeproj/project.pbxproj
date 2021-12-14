@@ -25,6 +25,7 @@
 		564B91F72054F11E00AC85C9 /* UIImageView+Web.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B91F52054F11E00AC85C9 /* UIImageView+Web.m */; };
 		564B91FD20556E7B00AC85C9 /* MomentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B91FC20556E7B00AC85C9 /* MomentsTableViewController.m */; };
 		79DD82A040C12ED4F8226F19 /* libPods-JFWechatMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD74207EF28B2D35FFA0976 /* libPods-JFWechatMoments.a */; };
+		C406BC252768E04B00443990 /* MNFloatBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C406BC232768E04A00443990 /* MNFloatBtn.m */; };
 		C48351E3274D28C4001858FC /* JFDownloadManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C48351E2274D28C4001858FC /* JFDownloadManagerTests.m */; };
 		C48351E5274D2F25001858FC /* WebImageManageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C48351E4274D2F25001858FC /* WebImageManageTests.m */; };
 		C48351EB274DE720001858FC /* JFPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = C48351EA274DE720001858FC /* JFPhotoBrowser.m */; };
@@ -201,6 +202,8 @@
 		6564707A1992CFE800E77320 /* Pods-JFWechatMomentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFWechatMomentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JFWechatMomentsTests/Pods-JFWechatMomentsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A65DFE617555CFE906F6CF22 /* libPods-JFWechatMomentsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JFWechatMomentsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB3FBCBC474EF0CD9CD3643 /* Pods-JFWechatMomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFWechatMomentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JFWechatMomentsTests/Pods-JFWechatMomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C406BC232768E04A00443990 /* MNFloatBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNFloatBtn.m; sourceTree = "<group>"; };
+		C406BC242768E04B00443990 /* MNFloatBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNFloatBtn.h; sourceTree = "<group>"; };
 		C48351E2274D28C4001858FC /* JFDownloadManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFDownloadManagerTests.m; sourceTree = "<group>"; };
 		C48351E4274D2F25001858FC /* WebImageManageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebImageManageTests.m; sourceTree = "<group>"; };
 		C48351E9274DE720001858FC /* JFPhotoBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFPhotoBrowser.h; sourceTree = "<group>"; };
@@ -1168,6 +1171,8 @@
 		C4E7F61927662119005EED20 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C406BC242768E04B00443990 /* MNFloatBtn.h */,
+				C406BC232768E04A00443990 /* MNFloatBtn.m */,
 				C4E7F61A27662119005EED20 /* HDDUploadImageAlertView.h */,
 				C4E7F61B27662119005EED20 /* HDDSelectedTimeView.h */,
 				C4E7F61C27662119005EED20 /* HDDHeaderSearchView.m */,
@@ -1446,6 +1451,7 @@
 				C4E7F5CB276620F1005EED20 /* HDDRefreshHeader.m in Sources */,
 				C48351EB274DE720001858FC /* JFPhotoBrowser.m in Sources */,
 				C4E7F5D4276620F1005EED20 /* UIView+Zirkfied.m in Sources */,
+				C406BC252768E04B00443990 /* MNFloatBtn.m in Sources */,
 				C4E7F6592766211A005EED20 /* HDDInputPopView.m in Sources */,
 				C4E7F65C2766211A005EED20 /* HDDCameraWatermarkView.m in Sources */,
 				564B91F12054EFF200AC85C9 /* UIImage+Color.m in Sources */,
