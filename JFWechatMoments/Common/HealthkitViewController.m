@@ -295,4 +295,93 @@
     [healthStore executeQuery:query];
 }
 
+
+//dispatch_group_t group = dispatch_group_create();
+//    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        //请求1
+//        NSLog(@"Request_1");
+//    });
+//    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        //请求2
+//        NSLog(@"Request_2");
+//    });
+//    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        //请求3
+//        NSLog(@"Request_3");
+//    });
+//    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+//        //界面刷新
+//        NSLog(@"任务均完成，刷新界面");
+//    });
+
+
+
+//dispatch_group_t group = dispatch_group_create();
+//    dispatch_group_enter(group);
+//    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        //请求1
+//        [网络请求:{
+//        成功：dispatch_group_leave(group);
+//        失败：dispatch_group_leave(group);
+//}];
+//    });
+//    dispatch_group_enter;
+//    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        //请求2
+//        [网络请求:{
+//        成功：dispatch_group_leave;
+//        失败：dispatch_group_leave;
+//}];
+//    });
+//    dispatch_group_enter(group);
+//    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        //请求3
+//        [网络请求:{
+//        成功：dispatch_group_leave(group);
+//        失败：dispatch_group_leave(group);
+//}];
+//    });
+//    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+//        //界面刷新
+//        NSLog(@"任务均完成，刷新界面");
+//    });
+//dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+
+//二、某界面存在多个请求，希望请求依次执行。
+//对于这个问题通常会通过线程依赖进行解决，因使用GCD设置线程依赖比较繁琐，这里通过NSOperationQueue进行实现，这里采用比较经典的例子，三个任务分别为下载图片，打水印和上传图片，三个任务需异步执行但需要顺序性。代码如下，下载图片、打水印、上传图片仍模拟为分别请求新闻列表3页数据。
+//
+////1.任务一：下载图片
+//  NSBlockOperation *operation1 = [NSBlockOperation blockOperationWithBlock:^{
+//      [self request_A];
+//  }];
+//
+//  //2.任务二：打水印
+//  NSBlockOperation *operation2 = [NSBlockOperation blockOperationWithBlock:^{
+//      [self request_B];
+//  }];
+//
+//  //3.任务三：上传图片
+//  NSBlockOperation *operation3 = [NSBlockOperation blockOperationWithBlock:^{
+//      [self request_C];
+//  }];
+//
+//  //4.设置依赖
+//  [operation2 addDependency:operation1];      //任务二依赖任务一
+//  [operation3 addDependency:operation2];      //任务三依赖任务二
+//
+//  //5.创建队列并加入任务
+//  NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+//  [queue addOperations:@[operation3, operation2, operation1] waitUntilFinished:NO];
+
+
+
+//dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+//[网络请求:{
+//        成功：dispatch_semaphore_signal(sema);
+//        失败：dispatch_semaphore_signal(sema);
+//}];
+//dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+
+
+
 @end
