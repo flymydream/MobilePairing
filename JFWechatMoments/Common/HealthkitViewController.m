@@ -8,6 +8,7 @@
 
 #import "HealthkitViewController.h"
 #import<HealthKit/HealthKit.h>
+#import<CoreMotion/CoreMotion.h>
 
 @interface HealthkitViewController ()
 {
@@ -234,6 +235,9 @@
     };
     
     [healthStore executeQuery:query];
+   
+   [CMPedometer isStepCountingAvailable];
+
 }
 //获取距离代码
 - (void)getHealthDistanceData{
@@ -293,6 +297,8 @@
     };
     
     [healthStore executeQuery:query];
+   
+   CMMotionManager
 }
 
 
@@ -383,5 +389,135 @@
 //dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
 
 
+//获取步数
+//- (void)getStepCount:(void(^)(double value, NSError *error))completion{
+//    //HKQuantityTypeIdentifierStepCount 计算步数
+//    HKQuantityType *stepType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
+//    //排序规则
+//    NSSortDescriptor *timeSortDescriptor = [[NSSortDescriptor alloc] initWithKey:HKSampleSortIdentifierEndDate ascending:NO];
+//    //HKObjectQueryNoLimit 数量限制
+//    HKSampleQuery *query = [[HKSampleQuery alloc] initWithSampleType:stepType predicate:[HealthKitManage predicateForSamplesToday] limit:HKObjectQueryNoLimit sortDescriptors:@[timeSortDescriptor] resultsHandler:^(HKSampleQuery *query, NSArray *results, NSError *error) {
+//        if(error)
+//        {
+//            completion(0,error);
+//        }
+//        else
+//        {
+//            NSInteger totleSteps = 0;
+//            double sumTime = 0;
+//            //获取数组
+//            for(HKQuantitySample *quantitySample in results){
+//                HKQuantity *quantity = quantitySample.quantity;
+//                HKUnit *heightUnit = [HKUnit countUnit];
+//                double usersHeight = [quantity doubleValueForUnit:heightUnit];
+//                NSLog(@"%f",usersHeight);
+//                totleSteps += usersHeight;
+//
+//                NSDateFormatter *fm=[[NSDateFormatter alloc]init];
+//                fm.dateFormat=@"yyyy-MM-dd HH:mm:ss";
+//                NSString *strNeedStart = [fm stringFromDate:quantitySample.startDate];
+//                NSLog(@"startDate %@",strNeedStart);
+//                NSString *strNeedEnd = [fm stringFromDate:quantitySample.endDate];
+//                NSLog(@"endDate %@",strNeedEnd);
+//                sumTime += [quantitySample.endDate timeIntervalSinceDate:quantitySample.startDate];
+//            }
+//            NSLog(@"当天行走步数 = %ld",(long)totleSteps);
+//            int h = sumTime / 3600;
+//            int m = ((long)sumTime % 3600)/60;
+//            NSLog(@"运动时长：%@小时%@分", @(h), @(m));
+//            completion(totleSteps,error);
+//        }
+//    }];
+//
+//    [self.healthStore executeQuery:query];
+//}
 
+
+//获取公里数
+//- (void)getDistance:(void(^)(double value, NSError *error))completion
+//{
+//    HKQuantityType *distanceType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning];
+//    NSSortDescriptor *timeSortDescriptor = [[NSSortDescriptor alloc] initWithKey:HKSampleSortIdentifierEndDate ascending:NO];
+//    HKSampleQuery *query = [[HKSampleQuery alloc] initWithSampleType:distanceType predicate:[HealthKitManage predicateForSamplesToday] limit:HKObjectQueryNoLimit sortDescriptors:@[timeSortDescriptor] resultsHandler:^(HKSampleQuery * _Nonnull query, NSArray<__kindof HKSample *> * _Nullable results, NSError * _Nullable error) {
+//
+//        if(error)
+//        {
+//            completion(0,error);
+//        }
+//        else
+//        {
+//            double totleSteps = 0;
+//            for(HKQuantitySample *quantitySample in results)
+//            {
+//                HKQuantity *quantity = quantitySample.quantity;
+//                HKUnit *distanceUnit = [HKUnit meterUnitWithMetricPrefix:HKMetricPrefixKilo];
+//                double usersHeight = [quantity doubleValueForUnit:distanceUnit];
+//                totleSteps += usersHeight;
+//            }
+//            NSLog(@"当天行走距离 = %.2f",totleSteps);
+//            completion(totleSteps,error);
+//        }
+//    }];
+//    [self.healthStore executeQuery:query];
+//}
+
+//// 查询数据的类型，比如计步，行走+跑步距离等等
+//HKQuantityType *quantityType = [HKQuantityType quantityTypeForIdentifier:(HKQuantityTypeIdentifierStepCount)];
+//// 谓词，用于限制查询返回结果
+//NSPredicate *predicate = [HKQuery predicateForSamplesWithStartDate:start endDate:end options:(HKQueryOptionNone)];
+//
+//NSCalendar *calendar = [NSCalendar currentCalendar];
+//NSDateComponents *anchorComponents = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[NSDate date]];
+//// 用于锚集合的时间间隔
+//NSDate *anchorDate = [calendar dateFromComponents:anchorComponents];
+//
+//// 采样时间间隔
+//NSDateComponents *intervalComponents = [[NSDateComponents alloc] init];
+//intervalComponents.day = 1;
+//
+//// 创建统计查询对象
+//HKStatisticsCollectionQuery *query = [[HKStatisticsCollectionQuery alloc] initWithQuantityType:quantityType quantitySamplePredicate:predicate options:(HKStatisticsOptionCumulativeSum|HKStatisticsOptionSeparateBySource) anchorDate:anchorDate intervalComponents:intervalComponents];
+//query.initialResultsHandler = ^(HKStatisticsCollectionQuery * _Nonnull query, HKStatisticsCollection * _Nullable result, NSError * _Nullable error) {
+//NSMutableArray *resultArr =  [NSMutableArray array];
+//if (error) {
+//    NSLog(@"error: %@", error);
+//} else {
+//    for (HKStatistics *statistics in [result statistics]) {
+//        NSLog(@"statics: %@,\n sources: %@", statistics, statistics.sources);
+//        for (HKSource *source in statistics.sources) {
+//            // 过滤掉其它应用写入的健康数据
+//            if ([source.name isEqualToString:[UIDevice currentDevice].name]) {
+//            // 获取到步数
+//            double step = round([[statistics sumQuantityForSource:source] doubleValueForUnit:[HKUnit countUnit]]);
+//            }
+//        }
+//    }
+//}
+//// 执行查询请求
+//[self.healthStore executeQuery:query];
+ 
+/*!
+ *  @brief  当天时间段
+ *
+ *  @return 时间段
+ */
++ (NSPredicate *)predicateForSamplesToday {
+    //获取日历
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    //获取当前时间
+    NSDate *now = [NSDate date];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond fromDate:now];
+    //设置为0
+    [components setHour:0];
+    [components setMinute:0];
+    [components setSecond:0];
+    //设为开始时间
+    NSDate *startDate = [calendar dateFromComponents:components];
+    //把开始时间之后推一天为结束时间
+    NSDate *endDate = [calendar dateByAddingUnit:NSCalendarUnitDay value:1 toDate:startDate options:0];
+    //设置开始时间和结束时间为一段时间
+    NSPredicate *predicate = [HKQuery predicateForSamplesWithStartDate:startDate endDate:endDate options:HKQueryOptionNone];
+    return predicate;
+}
+//https://www.cnblogs.com/demodashi/p/8509492.html
 @end
