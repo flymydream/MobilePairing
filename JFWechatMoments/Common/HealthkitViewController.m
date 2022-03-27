@@ -520,4 +520,102 @@
     return predicate;
 }
 //https://www.cnblogs.com/demodashi/p/8509492.html
+
+
+//- (void)hidesTabBar:(BOOL)hidden{
+//    [UIView beginAnimations:nil context:NULL];
+//    [UIView setAnimationDuration:0];
+//    for (UIView *view in self.tabBarController.view.subviews) {
+//        if ([view isKindOfClass:[UITabBar class]]) {
+//            if (hidden) {
+//                [view setFrame:CGRectMake(view.frame.origin.x, [UIScreen mainScreen].bounds.size.height, view.frame.size.width , view.frame.size.height)];
+//
+//            }else{
+//                [view setFrame:CGRectMake(view.frame.origin.x, [UIScreen mainScreen].bounds.size.height - 49, view.frame.size.width, view.frame.size.height)];
+//
+//            }
+//        }else{
+//            if([view isKindOfClass:NSClassFromString(@"UITransitionView")]){
+//                if (hidden) {
+//                    [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, [UIScreen mainScreen].bounds.size.height)];
+//
+//                }else{
+//                    [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, [UIScreen mainScreen].bounds.size.height - 49 )];
+//
+//                }
+//            }
+//        }
+//    }
+//    [UIView commitAnimations];
+//
+//}
+
+//1
+#pragma mark -隐藏TabBar
+- (void)hideTabBar {
+    if (self.tabBarController.tabBar.hidden == YES) {
+        return;
+    }
+    UIView *contentView;
+    if ( [[self.tabBarController.view.subviews objectAtIndex:0] isKindOfClass:[UITabBar class]] )
+        contentView = [self.tabBarController.view.subviews objectAtIndex:1];
+    else
+        contentView = [self.tabBarController.view.subviews objectAtIndex:0];
+    contentView.frame = CGRectMake(contentView.bounds.origin.x,  contentView.bounds.origin.y,  contentView.bounds.size.width, contentView.bounds.size.height + self.tabBarController.tabBar.frame.size.height);
+    self.tabBarController.tabBar.hidden = YES;
+    
+}
+
+#pragma mark -显示TabBar
+- (void)showTabBar {
+    if (self.tabBarController.tabBar.hidden == NO)
+    {
+        return;
+    }
+    UIView *contentView;
+    if ([[self.tabBarController.view.subviews objectAtIndex:0] isKindOfClass:[UITabBar class]])
+        contentView = [self.tabBarController.view.subviews objectAtIndex:1];
+    
+    else
+        
+        contentView = [self.tabBarController.view.subviews objectAtIndex:0];
+    contentView.frame = CGRectMake(contentView.bounds.origin.x, contentView.bounds.origin.y,  contentView.bounds.size.width, contentView.bounds.size.height - self.tabBarController.tabBar.frame.size.height);
+    self.tabBarController.tabBar.hidden = NO;
+    
+}
+
+//2
+////隐藏
+//self.hidesBottomBarWhenPushed = YES;
+////显示
+//self.hidesBottomBarWhenPushed = NO;
+
+
+//vc.hidesBottomBarWhenPushed = YES;
+//[self.navigationController pushViewController:vc animated:YES];
+
+
+// 强制显示tabbar
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//
+//     // 强制显示tabbar
+//     NSArray *views = self.tabBarController.view.subviews;
+//     UIView *contentView = [views objectAtIndex:0];
+//     contentView.height -= 49;
+//     self.tabBarController.tabBar.hidden = NO;
+//}
+//
+//- (void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//    // 强制隐藏tabbar
+//    NSArray *views = self.tabBarController.view.subviews;
+//    UIView *contentView = [views objectAtIndex:0];
+//    contentView.height += 49;
+//    self.tabBarController.tabBar.hidden = YES;
+//}
+
+
 @end
