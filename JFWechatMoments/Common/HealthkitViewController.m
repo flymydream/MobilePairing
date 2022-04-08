@@ -297,8 +297,7 @@
     };
     
     [healthStore executeQuery:query];
-   
-   CMMotionManager
+
 }
 
 
@@ -615,6 +614,36 @@
 //    UIView *contentView = [views objectAtIndex:0];
 //    contentView.height += 49;
 //    self.tabBarController.tabBar.hidden = YES;
+//}
+
+
+#pragma mark - 获取当天的步数
+//- (NSPredicate *)predicateForSamplesToday {
+//    NSCalendar *calendar = [NSCalendar currentCalendar];
+//
+//    NSDate *now = [NSDate date];
+//
+//    NSDate *startDate = [calendar startOfDayForDate:now];
+//    NSDate *endDate = [calendar dateByAddingUnit:NSCalendarUnitDay value:1 toDate:startDate options:0];
+//
+//    return [HKQuery predicateForSamplesWithStartDate:startDate endDate:endDate options:HKQueryOptionStrictStartDate];
+//}
+
+//- (NSPredicate *)getPredict {
+//   NSDate *now = [NSDate date];
+//       NSCalendar *calender = [NSCalendar currentCalendar];
+//       NSUInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+//       NSDateComponents *dateComponent = [calender components:unitFlags fromDate:now];
+//       int hour = (int)[dateComponent hour];
+//       int minute = (int)[dateComponent minute];
+//       int second = (int)[dateComponent second];
+//       NSDate *nowDay = [NSDate dateWithTimeIntervalSinceNow:  - (hour*3600 + minute * 60 + second) ];
+//       //时间结果与想象中不同是因为它显示的是0区
+//       NSLog(@"今天%@",nowDay);
+//       NSDate *nextDay = [NSDate dateWithTimeIntervalSinceNow:  - (hour*3600 + minute * 60 + second)  + 86400];
+//       NSLog(@"明天%@",nextDay);
+//       NSPredicate *predicate = [HKQuery predicateForSamplesWithStartDate:nowDay endDate:nextDay options:(HKQueryOptionNone)];
+//   return predicate;
 //}
 
 
