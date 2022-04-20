@@ -647,4 +647,60 @@
 //}
 
 
+//iOS7
+//
+//zh-Hans: 简体
+//zh-Hant: 繁体
+//
+//iOS8
+//
+//zh-Hans: 简体
+//zh-Hant: 繁体
+//zh-HK: 香港繁体（增加）
+//
+//iOS9
+//
+//zh-Hans-CN: 简体（改变）
+//zh-Hant-CN: 繁体（改变）
+//zh-HK: 香港繁体
+//zh-TW: 台湾繁体（增加）
+//
+//iOS 10
+//
+//zh-Hans-CN 简体
+//yue-Hans-CN 粤语 简体 （增加）
+//yue-Hant-CN 粤语 繁体 （增加）
+//zh-Hant-CN 繁体
+//zh-Hant-MO 澳门繁体 （改变）
+//zh-Hant-TW 台湾繁体 （改变）
+//zh-Hant-HK 香港繁体 （改变）
+
+
+- (BOOL)isChineseLanguage {
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *pfLanguageCode = [languages objectAtIndex:0];
+    if ([pfLanguageCode isEqualToString:@"zh-Hant"] ||
+        [pfLanguageCode hasPrefix:@"zh-Hant"] ||
+        [pfLanguageCode hasPrefix:@"yue-Hant"] ||
+        [pfLanguageCode isEqualToString:@"zh-HK"] ||
+        [pfLanguageCode isEqualToString:@"zh-TW"]||
+        [pfLanguageCode isEqualToString:@"zh-Hans"] ||
+        [pfLanguageCode hasPrefix:@"yue-Hans"] ||
+        [pfLanguageCode hasPrefix:@"zh-Hans"]
+        ){
+        return YES;
+    } else {
+        return NO;
+    }
+    return NO;
+}
+ 
+- (void)setLanguage {
+   //或者这个方法，NSUserDefaults可以强制写入首选语言用于应用内切换语言 获取系统当前语言版本(中文zh-Hans,英文en)
+   NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+   NSArray * allLanguages = [defaults objectForKey:@"AppleLanguages"];
+   NSString * preferredLang = [allLanguages objectAtIndex:0];
+}
+
+
 @end
