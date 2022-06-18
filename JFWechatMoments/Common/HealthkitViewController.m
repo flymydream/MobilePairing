@@ -702,5 +702,150 @@
    NSString * preferredLang = [allLanguages objectAtIndex:0];
 }
 
+//判断是否安装app
+//+ (BOOL)verifyAppWithBundle:(NSString *)bundleID{
+//  __block BOOL isInstall = NO;
+//    if ([[UIDevice currentDevice].systemVersion floatValue] >= 11.0) {
+//                 //iOS12间接获取办法
+//           if ([[UIDevice currentDevice].systemVersion floatValue] >= 12.0){
+//                    Class lsawsc = objc_getClass("LSApplicationWorkspace");
+//                    NSObject* workspace = [lsawsc performSelector:NSSelectorFromString(@"defaultWorkspace")];
+//                    NSArray *plugins = [workspace performSelector:NSSelectorFromString(@"installedPlugins")]; //列出所有plugins
+////                    DLOG(@"installedPlugins:%@",plugins);
+//                    [plugins enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//                    NSString *pluginID = [obj performSelector:(@selector(pluginIdentifier))];
+//                        NSLog(@"pluginID：%@",pluginID);
+//                        if([pluginID containsString:bundleID]){
+//                            isInstall = YES;
+//                            return;
+//                        }
+//               }];
+//               return isInstall;
+//           }else{
+//                   //iOS11获取办法
+//                   NSBundle *container = [NSBundle bundleWithPath:@"/System/Library/PrivateFrameworks/MobileContainerManager.framework"];
+//                   if ([container load]) {
+//                         Class appContainer = NSClassFromString(@"MCMAppContainer");
+//                         id test = [appContainer performSelector:@selector(containerWithIdentifier:error:) withObject:bundleID withObject:nil];
+//                         NSLog(@"%@",test);
+//                         if (test) {
+//                              return YES;
+//                          } else {
+//                              return NO;
+//                            }
+//
+//                    }else{
+//                        return NO;
+//                    }
+//
+//               }
+//
+//       }else{
+//       //iOS10及以下获取办法
+//           Class lsawsc = objc_getClass("LSApplicationWorkspace");
+//
+//           NSObject* workspace = [lsawsc performSelector:NSSelectorFromString(@"defaultWorkspace")];
+//
+//           NSArray *appList = [workspace performSelector:@selector(allApplications)];
+//
+//           Class LSApplicationProxy_class = object_getClass(@"LSApplicationProxy");
+//
+//           for (LSApplicationProxy_class in appList)
+//
+//           {
+//              //这里可以查看一些信息
+//
+//               NSString *bundleID = [LSApplicationProxy_class performSelector:@selector(applicationIdentifier)];
+//
+//               NSString *version =  [LSApplicationProxy_class performSelector:@selector(bundleVersion)];
+//
+//               NSString *shortVersionString =  [LSApplicationProxy_class performSelector:@selector(shortVersionString)];
+//
+//               if ([bundleID isEqualToString:bundleID]) {
+//                   return  YES;
+//               }
+//           }
+//           return NO;
+//
+//       }
+//    return NO;
+//
+//}
+
+
+//这个方法简单高效，也有使用前提，需要提前知晓目标APP的URL Schemes ，这个URL Schemes 查找方式跟上面 bundle ID一样，也在info.plist中，在URL types数组下。
+//同时也有缺点，ios9以上的系统，需要设置白名单，否则就是目标APP安装了，方法二也会返回NO。
+//白名单设置方式：在info.plist中添加
+//<key>LSApplicationQueriesSchemes</key>
+//
+//    <array>
+//
+//        <string>您的urlSchemes</string>
+//
+//    </array>
+
+- (void)funtionCanOpenURL {
+   if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"IOSDevApp://"]]){
+
+       //说明此设备有安装app
+
+   }else{
+
+       //说明此设备没有安装app
+
+   };
+}
+
+//方式三 导入#include <objc/runtime.h>
+//使用上述方式，首先要先知晓目标App的bundle ID。查bundle ID方法的是下载目标App的ipa安装包，将.ipa改成.zip，然后右键显示包内容，查找到info.plist文件，打开找到Bundle identifier对应的value值就是bundle ID了。
+//
+//缺点：方法一消耗一定的性能（手机安装APP比较多的话），APP审核有可能被拒
+//
+//优点：跳过了ios9.0对canOpenURL这个API使用限制
+//- (void)function3
+//{
+//   Class LSApplicationWorkspace_class = objc_getClass("LSApplicationWorkspace");
+//
+//   NSObject* workspace = [LSApplicationWorkspace_class performSelector:@selector(defaultWorkspace)];
+//
+//   NSArray *allApplications = [workspace performSelector:@selector(allApplications)];//这样就能获取到手机中安装的所有App
+//
+//   NSLog(@"设备上安装的所有app:%@",allApplications);    NSInteger zlConnt = 0;
+//
+//   for (NSString *appStr in allApplications) {
+//
+//         NSString *app = [NSString stringWithFormat:@"%@",appStr];//转换成字符串
+//
+//           NSRange range = [app rangeOfString:@"你要查询App的bundle ID"];//是否包含这个bundle ID
+//
+//            if (range.length > 1) {
+//
+//                   zlConnt ++;
+//
+//            }
+//
+//      }
+//
+//      if (zlConnt >= 1) {
+//
+//           NSLog(@"已安装");
+//
+//       }
+//}
+
+//-(BOOL)checkAPPIsExist:(NSString*)URLScheme{
+//    NSURL* url;
+//    if ([URLScheme containsString:@"://"]) {
+//        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",URLScheme]];
+//    } else {
+//        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@://",URLScheme]];
+//    }
+//    if ([[UIApplication sharedApplication] canOpenURL:url]){
+//        return YES;
+//    } else {
+//        return NO;
+//    }
+//}
+
 
 @end
