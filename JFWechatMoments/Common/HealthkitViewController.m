@@ -847,5 +847,19 @@
 //    }
 //}
 
+//-(void)openWechat{
+//    NSURL * url = [NSURL URLWithString:@"weixin://"];
+//    BOOL canOpen = [[UIApplication sharedApplication] canOpenURL:url];
+//    //先判断是否能打开该url
+//    if (canOpen)
+//    {   //打开微信
+//        [[UIApplication sharedApplication] openURL:url];
+//    }else {
+//        [MBProgressHUD showMoreLine:@"您的设备未安装微信APP" view:nil];
+//    }
+//}
+
+
+
 
 @end
