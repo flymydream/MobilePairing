@@ -9,7 +9,9 @@
 #import "HealthkitViewController.h"
 #import<HealthKit/HealthKit.h>
 #import<CoreMotion/CoreMotion.h>
-
+#import "KeychainItemWrapper.h"
+#import "SFHFKeychainUtils.h"
+#define ServiceName @"com.mycompany.yourAppServiceName"
 @interface HealthkitViewController ()
 {
     HKHealthStore  *store;
@@ -860,6 +862,170 @@
 //}
 
 
+//这两天做了一个需求,(类似微信等的授权登录)就是手头做的这个项目暂且称之为APP B提供给友商去拉起,提供授权登录的操作,授权成功后返回登录凭证token等信息给APP A处理
+//1,实现APP间相互调起(查看了相关技术资料,三种实现方式)
+//2,拉起指定的授权页面
+//3,应用间数据相互传递
+//
+//步骤：
+//应用A_app跳转到应用B_app
+//1、首先我们用Xcode创建两个iOS应用程序项目，项目名称分别为A_app、B_app。
+//2、选择项目B_app -> TARGETS -> Info -> URL Types -> URL Schemes，设置B_app的URL Schemes为B_app。
+//3、在应用程序A_app中添加一个用来点击跳转的Button，并监听点击事件，添加跳转代码
+////跳转代码
+//-(void)Click:(UIButton *)btn{
+//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"B_app://sing?type=1&package_name=com.vistateach.wtepractice"]];
+//    [[UIApplication sharedApplication] openURL:url];
 
+//4、在B_app的AppDelegate里
+//-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+////跳转授权页面
+//    NSString *urlStr = url.absoluteString;
+//   VistaAuthorizeViewController *vc=[[VistaAuthorizeViewController alloc] init];//VistaAuthorizeViewController是授权页面
+//   vc.package_name=[urlStr componentsSeparatedByString:@"package_name="][1];
+//   UINavigationController *naVC = [[UINavigationController alloc]initWithRootViewController:vc];
+//   self.window.rootViewController = naVC;
+//   return YES;
+//}
+
+//5、在VistaAuthorizeViewController.m中写上UI
+//其中包含立即登录按钮 ，在登录事件中 反拉A_app并传值 token
+//B_app立即登录点击事件中
+//-(void)login:(UIButton *)btn{
+//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"A_app://sing?taken=%@",Token]];
+//    [[UIApplication sharedApplication] openURL:url];
+//}
+
+- (void)getRequest{
+    //请求方式
+    CFStringRef requestMethod = CFSTR("GET");
+    //链接转CFString()
+    //CFStringRef requestUrlStr = (__bridge CFStringRef)urlString;
+    CFStringRef requestUrlStr = CFSTR("http://v.juhe.cn/joke/content/list.php?key=cf8b72d4930036755933fc9f4b157443&page=2&pagesize=10&sort=asc&time=1418745237");
+    //urldu对象
+    CFURLRef requestUrl = CFURLCreateWithString(kCFAllocatorDefault, requestUrlStr, NULL);
+    //HTTP消息对象
+    CFHTTPMessageRef messageObj = CFHTTPMessageCreateRequest(kCFAllocatorDefault, requestMethod, requestUrl, kCFHTTPVersion1_1);
+    //接下来开始设置请求头下面这个是我设置的Content-Type
+    CFStringRef headerKey = CFSTR("Content-Type");
+    CFStringRef headerValue = CFSTR("application/x-www-form-urlencoded; charset=utf-8");
+    CFHTTPMessageSetHeaderFieldValue(messageObj, headerKey,headerValue);
+    
+    //创建读取流的对象
+    CFReadStreamRef readStream = CFReadStreamCreateForHTTPRequest(kCFAllocatorDefault, messageObj);
+    //设置监听
+    CFStreamClientContext ctxt = {0, (__bridge void *)(self), NULL, NULL, NULL};
+    //设置回调相关参数
+    //    kCFStreamEventNone = 0,kCFStreamEventOpenCompleted = 1,kCFStreamEventHasBytesAvailable = 2,kCFStreamEventCanAcceptBytes = 4,kCFStreamEventErrorOccurred = 8,kCFStreamEventEndEncountered = 16
+    //第一个参数监听的对象,第二个参数监听的事件,第三个参数监听的回调方法,第四个参数(没看明白)
+    CFReadStreamSetClient(readStream, kCFStreamEventHasBytesAvailable|kCFStreamEventOpenCompleted|kCFStreamEventNone|kCFStreamEventCanAcceptBytes|kCFStreamEventErrorOccurred|kCFStreamEventEndEncountered, readStreamCallBack, &ctxt);
+    //将读取流加入到runLoop
+    //第一个参数流对象,第二个获取当前的runloop,第三个参数runloop的类型
+    CFReadStreamScheduleWithRunLoop(readStream, CFRunLoopGetCurrent(), kCFRunLoopCommonModes);
+    //最后一步开启流
+    //这个是有返回值得
+    if (CFReadStreamOpen(readStream)) {
+        NSLog(@"开启成功");
+        //开启runLoop
+        CFRunLoopRun();
+    }else{
+        NSLog(@"开启失败");
+    }
+ }
+
+void readStreamCallBack(CFReadStreamRef stream,CFStreamEventType type,void *clientCallBackInfo){
+  UInt8 buf[1024];
+  switch (type) {
+    case kCFStreamEventNone:
+        NSLog(@"没有任何事发生");
+        break;
+    case kCFStreamEventOpenCompleted:
+        NSLog(@"流打开成功");
+        break;
+    case kCFStreamEventHasBytesAvailable:
+        //定义一个用来接收数据
+        CFReadStreamRead(stream, buf, 1024);
+        printf("%s",buf);
+        NSLog(@"有数据可以读取了");
+        break;
+    case kCFStreamEventCanAcceptBytes:
+        NSLog(@"能接收读取数据了");
+        break;
+    case kCFStreamEventErrorOccurred:
+        NSLog(@"肯定出错了");
+        break;
+    case kCFStreamEventEndEncountered:
+        NSLog(@"流结束了,这个时候可以装接收到的buf数据转成我们需要的格式比如转json");
+        //需要关闭流地址
+        CFReadStreamClose(stream);
+        //从runLoop中移除
+        CFReadStreamUnscheduleFromRunLoop(stream, CFRunLoopGetCurrent(), kCFRunLoopCommonModes);
+        break;
+    default:
+        NSLog(@"不知道咋啦");
+        break;
+  }
+}
+
+//CFStringRef bodyString = CFSTR("POST"); // Usually used for POST data
+//CFDataRef bodyData = CFStringCreateExternalRepresentation(kCFAllocatorDefault,
+//                                        bodyString, kCFStringEncodingUTF8, 0);
+//
+//CFStringRef headerFieldName = CFSTR("X-My-Favorite-Field");
+//CFStringRef headerFieldValue = CFSTR("Dreams");
+//
+//CFStringRef url = CFSTR("http://www.apple.com");
+//CFURLRef myURL = CFURLCreateWithString(kCFAllocatorDefault, url, NULL);
+//
+//CFStringRef requestMethod = CFSTR("GET");
+//CFHTTPMessageRef myRequest =
+//    CFHTTPMessageCreateRequest(kCFAllocatorDefault, requestMethod, myURL,
+//                               kCFHTTPVersion1_1);
+//
+//CFDataRef bodyDataExt = CFStringCreateExternalRepresentation(kCFAllocatorDefault, bodyData, kCFStringEncodingUTF8, 0);
+//CFHTTPMessageSetBody(myRequest, bodyDataExt);
+//CFHTTPMessageSetHeaderFieldValue(myRequest, headerFieldName, headerFieldValue);
+//CFDataRef mySerializedRequest = CFHTTPMessageCopySerializedMessage(myRequest);
+
+
+
+
+//-（void)testKeychain {
+//   　　/** 初始化一个保存用户帐号的KeychainItemWrapper */
+//       KeychainItemWrapper *wrapper = [[KeychainItemWrapper alloc] initWithIdentifier:@"Account Number" accessGroup:@"YOUR_APP_ID_HERE.com.yourcompany.AppIdentifier"];
+//   　　//保存帐号
+//   　　[wrapper setObject:@"<帐号>" forKey:(id)kSecAttrAccount]; //保存密码
+//   　　[wrapper setObject:@"<帐号密码>" forKey:(id)kSecValueData]; //从keychain里取出帐号密码
+//   　　NSString *password = [wrapper objectForKey:(id)kSecValueData];
+//   　　//清空设置
+//   　　[wrapper resetKeychainItem];
+//
+////   　　其中方法“- (void)setObject:(id)inObject forKey:(id)key;”里参数“forKey”的值应该是Security.framework 里头文件“SecItem.h”里定义好的key，用其他字符串做key程序会崩溃！
+//}
+//
+//- (void)testSFHFkeyChain {
+//
+//   　　NSError *error;
+//   　　NSString *userName = @"<用户名>";
+//   　　NSString *password = @"<用户密码>";
+//   　　/** 保存用户的密码*/
+//   　　BOOL saved = [SFHFKeychainUtils storeUsername:userName
+//   　　andPassword:password
+//   　　forServiceName:ServiceName
+//   　　updateExisting:YES
+//   　　error:&error ];
+//   　　if (!saved) {
+//   　    　NSLog(@"保存密码时出错：%@", error);
+//   　　}
+//
+//   　　error = nil;
+//   　　NSString *thePassword = [SFHFKeychainUtils getPasswordForUsername:userName
+//   　　andServiceName:ServiceName
+//   　　error:&error];
+//   　　if(error){
+//   　　    NSLog(@"从Keychain里获取密码出错：%@", error);
+//   　　}
+//}
+//https://blog.csdn.net/lerryteng/article/details/51423558 具体文章
 
 @end
