@@ -1028,4 +1028,30 @@ void readStreamCallBack(CFReadStreamRef stream,CFStreamEventType type,void *clie
 //}
 //https://blog.csdn.net/lerryteng/article/details/51423558 具体文章
 
+- (void)test {
+    
+//    NSCalendar *calendar = [NSCalendar currentCalendar];
+//    NSDate *now = [NSDate date];
+//    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:now];
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDate *endDate = [NSDate date];
+    NSDate *startDate = [calendar dateByAddingUnit:NSCalendarUnitDay value:-7 toDate:endDate options:NSCalendarWrapComponents];
+  
+    NSDateComponents *startDateComponents = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:startDate];
+    startDateComponents.calendar = calendar;
+  
+    NSDateComponents *endDateComponents = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:endDate];
+    endDateComponents.calendar = calendar;
+
+    // Create the predicate for the query
+    NSPredicate *predicate = [HKQuery predicateForActivitySummariesBetweenStartDateComponents:startDateComponents endDateComponents:endDateComponents];
+    
+    HKActivitySummaryQuery *summaryQuery = [[HKActivitySummaryQuery alloc] initWithPredicate:predicate resultsHandler:^(HKActivitySummaryQuery * _Nonnull query, NSArray<HKActivitySummary *> * _Nullable activitySummaries, NSError * _Nullable error) {
+    
+        //回到主线程刷新数据
+    }];
+   
+}
+
 @end
